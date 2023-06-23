@@ -6,6 +6,14 @@ body {
 
 }
 
+select {
+        /* Remove the default appearance */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+}
+
 /* HomePage.css */
 
 .home-container {

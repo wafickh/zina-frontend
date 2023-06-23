@@ -1,0 +1,529 @@
+.button-containerr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 0.5%;
+}
+
+#woww {
+    color: white;
+}
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.results-not-found {
+    width: 19.5%;
+    padding: 0.9rem;
+    
+    font-size: small;
+    font-weight: 600;
+    background-color: rgb(224, 183, 183);
+    color: rgb(228, 27, 27);
+    margin-left: 25%;
+    margin-top: 9%;
+   
+    transform: translate(-50%, -50%);
+}
+
+/* Add any additional styles as needed */
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72%;
+    padding: 1rem;
+    background-color: #562F4A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 0.2rem;
+    margin-top: 4%;
+    /* Add this line to create space below the button */
+}
+
+.responsive-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.7rem;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.pagename h3{
+    color: white;
+    
+}
+.pagename{
+    margin-top: 2%;
+    margin-bottom: -2%;
+}
+
+.responsive-container .left-container {
+    display: flex;
+    align-items: center;
+}
+
+.responsive-container .left-container button {
+    margin-right: 1rem;
+}
+
+.responsive-container .right-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+.responsive-container .right-container label {
+    margin-right: 10px;
+    align-self: center;
+}
+
+.responsive-container .right-container select {
+    width: 100%;
+    padding: 5px;
+}
+
+.filter-button:hover {
+    background-color: #fd9137;
+}
+
+.filter-button i {
+    margin-right: 0.5rem;
+
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(212, 178, 178, 0.1);
+}
+
+.dropdown-item {
+    margin-bottom: 1rem;
+}
+
+.dropdown-item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #562F4A;
+}
+
+.dropdown-item input[type="text"],
+.dropdown-item select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+
+.dropdown-item select {
+    appearance: none;
+
+    border-radius: 3px;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkbox-container label {
+    margin-bottom: 0.5rem;
+
+}
+
+.checkbox-container label input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.dropdown-menu {
+    display: block;
+    margin-top: -7%;
+    max-width: 70%;
+    /* Add this line */
+    /* Your existing styles for dropdown-menu */
+}
+
+.button-containerr {
+    position: relative;
+}
+
+.filter-button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.filter-icon {
+    margin-right: 5px;
+}
+.message-icon{
+    margin-right: 4px;
+    margin-bottom: 2px;
+    font-size: large;
+}
+
+.dropdown-menu {
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.dropdown-item {
+    margin-bottom: 10px;
+}
+
+#woww {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type='text'],
+select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+/* Remove default styles for dropdown links */
+.dropdown-menu a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    transition: none;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dropdown-item {
+    flex-basis: calc(25% - 10px);
+    margin-bottom: 10px;
+}
+
+.dropdown-item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dropdown-item select,
+.dropdown-item input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.dropdown-item select {
+    background-color: #f8f8f8;
+}
+
+.dropdown-item input[type="text"] {
+    background-color: #ffffff;
+}
+
+.left-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    padding: -1rem;
+    padding-bottom: 1rem;
+
+}
+
+.left-container button {
+    background-color: #562F4A;
+    color: white;
+    padding: 4px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    font-size: 22px;
+    transition: background-color 0.3s ease;
+}
+
+.left-container button:disabled {
+    background-color: #562f4a32;
+    color: rgba(255, 255, 255, 0.577);
+    cursor: not-allowed;
+}
+
+
+.left-container #sas {
+    margin: 0 10px;
+    font-size: 0.94rem;
+    color: white;
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 1rem;
+    margin-left: -0.17rem;
+}
+.reset-button{
+    font-size: small;
+    background-color: #562F4A;
+    color: white;
+    margin-left: 15%;
+    border: #562F4A;
+}.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 23%;
+    background-color: #030303;
+    box-shadow: 0 5px 3px #562F4A;
+    overflow: hidden;
+    position: relative;
+    /* Add this line */
+}
+
+.card-image {
+    width: 52%;
+    height: 60%;
+    object-fit: cover;
+    float: left;
+}
+
+.card-content {
+    padding: 16px;
+    overflow: hidden;
+}
+.card-title {
+    margin-bottom: 10px;
+    position: absolute;
+    top: 6px; 
+    right: 16px; 
+    font-size: 1.2rem;
+    width: 40%;
+    padding-left: 2%;
+    color: rgba(204, 204, 204, 0.8);
+    white-space: normal;
+    /* Update this line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+}
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.card-button {
+    width: 50%;
+    padding: 8px 12px;
+    border: none;
+    background-color: #562F4A;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-button.detailss {
+    background-color: #030303;
+    transition: all 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #fd9137;
+}
+
+@media (max-width: 1200px) {
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 28%;
+    }
+          .card-title {
+              font-size: 1.1rem;
+          }
+}
+@media (max-width: 1100px) {
+.cards-container {
+        flex-wrap: wrap;
+    }
+        .card {
+            width: 33%;
+        }
+    
+        .card-title {
+            font-size: 1.2rem;
+        }
+}
+@media (max-width: 900px) {
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 40%;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 700px) {
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 60%;
+        height: 70%;
+    }
+          .card-title {
+              font-size: 1.1rem;
+                padding-left: 0%;
+          }
+        .card-button {
+            font-size: 0.9rem;
+        }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 69%;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+    .card-image{
+        width: 53%;
+    }
+    .card-button{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 400px) {
+    .card {
+        width: 90%;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-image {
+        width: 53%;
+    }
+}
+@media (min-width: 768px) and (max-width: 980px) {
+    .dropdown-menu {
+        margin-top: -12.4%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .dropdown-item {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 575px) {
+    .dropdown-item {
+        flex-basis: 100%;
+    }
+}
+
+/* Remove background color on dropdown link hover and active states */
+.dropdown-menu {
+    --bs-dropdown-link-hover-bg: transparent !important;
+    --bs-dropdown-link-active-bg: transparent !important;
+}
+
+/* Media queries for mobile and tablet responsiveness */
+@media (max-width: 720px) {
+    .responsive-container {
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .responsive-container .right-container {
+        width: 100%;
+    }
+}
+
+/* styles.css */
+
+@media (max-width: 720px) {
+    .responsive-container .left-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    .responsive-container .right-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        width: 80%;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .filter-button {
+        width: 90%;
+    }
+
+    .dropdown-menu {
+        max-width: 100%;
+    }
+}

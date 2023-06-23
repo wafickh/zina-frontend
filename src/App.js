@@ -11,6 +11,7 @@ import {
 import Home from "./pages/home/Home";
 import Luxurycars from "./pages/Luxurycars/Luxurycars";
 import Privacy from "./pages/privacy/Privacy";
+import Construction from "./pages/constuction/Constuction";
 import Error404 from "./pages/error/Error404";
 function App() {
 
@@ -19,10 +20,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Construction />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/luxury-cars" element={<Luxurycars />} />
         <Route path="/privacy" element={<Privacy />} />
-        <Route element={<Error404 />} />
+        <Route path="/error" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
   );

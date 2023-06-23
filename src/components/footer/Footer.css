@@ -33,12 +33,12 @@ mainfoot a:hover {
 .mainfoot h2 {
     margin-top: 1%;
     font-size: 1.5rem;
-    color: #fdf2d1;
+    color: white;
     font-weight: bold;
 }
 
 .mainfoot p {
     font-size: 0.7rem;
     margin-top: 0.2%;
-    color: #fdf2d1;
+    color: white;
 }

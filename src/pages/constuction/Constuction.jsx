@@ -1,7 +1,7 @@
 import React from 'react';
 import './UnderConstruction.css';
 import { FaCar } from 'react-icons/fa';
-import { FaTools, FaHardHat, FaCog } from 'react-icons/fa'; 
+import { FaTools, FaHardHat, FaCog } from 'react-icons/fa';
 const Construction = () => {
     return (
         <div className="under-construction-container">
@@ -11,7 +11,7 @@ const Construction = () => {
                     <FaTools />
                 </div>
                 <div className="construction-icon">
-                    <FaHardHat />
+                    <FaCar />
                 </div>
                 <div className="construction-icon rotating">
                     <FaCog />

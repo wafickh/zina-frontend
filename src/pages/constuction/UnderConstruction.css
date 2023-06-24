@@ -16,7 +16,7 @@
 .title {
     font-size: 5rem;
     margin-bottom: 2rem;
-    text-shadow: 4px 4px 6px #562f4a;
+    text-shadow: 2px 2px 4px #562f4a;
     text-align: center;
 }
 
@@ -37,7 +37,7 @@
     color: #ff9800;
     background-color: #562f4a;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(255, 152, 0, 0.5);
+    box-shadow: 0 0 20px #562f4a;
     animation: float 3s infinite ease-in-out;
     transition: transform 0.3s, background-color 0.3s;
 }
@@ -113,14 +113,16 @@
         margin-top: 2rem;
         font-size: 3rem;
     }
-        .construction-icon {
-            width: 90px;
-            height: 90px;
-            font-size: 3rem;
-        }
-        .message{
-            font-size: 1.9rem;
-        }
+
+    .construction-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 3rem;
+    }
+
+    .message {
+        font-size: 1.9rem;
+    }
 
 }
 

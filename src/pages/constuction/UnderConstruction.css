@@ -30,9 +30,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 150px;
-    font-size: 7rem;
+    width: 130px;
+    height: 130px;
+    font-size: 6rem;
     color: #ff9800;
     background-color: #562f4a;
     border-radius: 50%;
@@ -113,9 +113,9 @@
         font-size: 3rem;
     }
         .construction-icon {
-            width: 100px;
-            height: 100px;
-            font-size: 4rem;
+            width: 90px;
+            height: 90px;
+            font-size: 3rem;
         }
         .message{
             font-size: 1.9rem;
@@ -129,9 +129,9 @@
     }
 
     .construction-icon {
-        width: 120px;
-        height: 120px;
-        font-size: 5rem;
+        width: 100px;
+        height: 100px;
+        font-size: 4rem;
     }
 
     .message {

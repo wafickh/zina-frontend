@@ -1,6 +1,6 @@
 import React from 'react';
 import './UnderConstruction.css';
-import { FaCar } from 'react-icons/fa';
+import { IoCarSportSharp } from "react-icons/io5";
 import { FaTools, FaHardHat, FaCog } from 'react-icons/fa';
 const Construction = () => {
     return (
@@ -11,7 +11,7 @@ const Construction = () => {
                     <FaTools />
                 </div>
                 <div className="construction-icon">
-                    <FaCar />
+                    <IoCarSportSharp />
                 </div>
                 <div className="construction-icon rotating">
                     <FaCog />

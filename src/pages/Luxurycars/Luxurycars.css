@@ -316,21 +316,22 @@ select {
 
 .card-image {
     width: 52%;
-    height: 60%;
+    height: 68%;
     object-fit: cover;
     float: left;
 }
 
 .card-content {
-    padding: 16px;
     overflow: hidden;
+    padding: 35px 1px;
+    
 }
 .card-title {
     margin-bottom: 10px;
     position: absolute;
     top: 6px; 
     right: 16px; 
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     width: 40%;
     padding-left: 2%;
     color: rgba(204, 204, 204, 0.8);
@@ -342,8 +343,10 @@ select {
 }
 .card-buttons {
     display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
+    justify-content: space-evenly;
+position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .card-button {
@@ -365,7 +368,21 @@ select {
 .card-button:hover {
     background-color: #fd9137;
 }
+select {
+    -webkit-appearance: none;
+    /* Remove default iOS styling */
+    -moz-appearance: none;
+    /* Remove default Firefox styling */
+    appearance: none;
+    /* Remove default styling */
+    color: inherit;
+    /* Inherit the color from the parent element */
+}
 
+option {
+    color: black;
+    /* Set the font color for options */
+}
 @media (max-width: 1200px) {
     .cards-container {
         flex-wrap: wrap;
@@ -390,6 +407,11 @@ select {
             font-size: 1.2rem;
         }
 }
+@media (max-width: 1000px) {
+    .card-button {
+            font-size: 0.9rem;
+        }
+}
 @media (max-width: 900px) {
     .cards-container {
         flex-wrap: wrap;
@@ -403,17 +425,26 @@ select {
         font-size: 1.2rem;
     }
 }
+@media (max-width: 800px) {
+  
+    .card-button {
+            font-size: 0.8rem;
+        }
+    .card-title {
+        font-size: 1.1rem;
+    }
+}
 @media (max-width: 700px) {
     .cards-container {
         flex-wrap: wrap;
     }
 
     .card {
-        width: 60%;
+        width: 67%;
         height: 70%;
     }
           .card-title {
-              font-size: 1.1rem;
+              font-size: 1.4rem;
                 padding-left: 0%;
           }
         .card-button {
@@ -423,17 +454,17 @@ select {
 
 @media (max-width: 480px) {
     .card {
-        width: 69%;
+        width: 80%;
     }
 
     .card-title {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     .card-image{
         width: 53%;
     }
     .card-button{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
 @media (max-width: 400px) {
@@ -442,7 +473,7 @@ select {
     }
 
     .card-title {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .card-image {

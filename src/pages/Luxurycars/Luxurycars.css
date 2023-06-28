@@ -10,23 +10,25 @@
 #woww {
     color: white;
 }
+
 .loading-screen {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
 .results-not-found {
     width: 19.5%;
     padding: 0.9rem;
-    
+
     font-size: small;
     font-weight: 600;
     background-color: rgb(224, 183, 183);
     color: rgb(228, 27, 27);
     margin-left: 25%;
     margin-top: 9%;
-   
+
     transform: translate(-50%, -50%);
 }
 
@@ -59,11 +61,13 @@
     margin-left: 15%;
     margin-right: 15%;
 }
-.pagename h3{
+
+.pagename h3 {
     color: white;
-    
+
 }
-.pagename{
+
+.pagename {
     margin-top: 2%;
     margin-bottom: -2%;
 }
@@ -177,7 +181,8 @@
 .filter-icon {
     margin-right: 5px;
 }
-.message-icon{
+
+.message-icon {
     margin-right: 4px;
     margin-bottom: 2px;
     font-size: large;
@@ -293,13 +298,16 @@ select {
     margin-right: 1rem;
     margin-left: -0.17rem;
 }
-.reset-button{
+
+.reset-button {
     font-size: small;
     background-color: #562F4A;
     color: white;
     margin-left: 15%;
     border: #562F4A;
-}.cards-container {
+}
+
+.cards-container {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -324,13 +332,14 @@ select {
 .card-content {
     overflow: hidden;
     padding: 35px 1px;
-    
+
 }
+
 .card-title {
     margin-bottom: 10px;
     position: absolute;
-    top: 6px; 
-    right: 16px; 
+    top: 6px;
+    right: 16px;
     font-size: 1.25rem;
     width: 40%;
     padding-left: 2%;
@@ -341,10 +350,11 @@ select {
     text-overflow: ellipsis;
     font-weight: 400;
 }
+
 .card-buttons {
     display: flex;
     justify-content: space-evenly;
-position: absolute;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -368,6 +378,7 @@ position: absolute;
 .card-button:hover {
     background-color: #fd9137;
 }
+
 select {
     -webkit-appearance: none;
     /* Remove default iOS styling */
@@ -383,6 +394,7 @@ option {
     color: black;
     /* Set the font color for options */
 }
+
 @media (max-width: 1200px) {
     .cards-container {
         flex-wrap: wrap;
@@ -391,27 +403,32 @@ option {
     .card {
         width: 28%;
     }
-          .card-title {
-              font-size: 1.1rem;
-          }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
 }
+
 @media (max-width: 1100px) {
-.cards-container {
+    .cards-container {
         flex-wrap: wrap;
     }
-        .card {
-            width: 33%;
-        }
-    
-        .card-title {
-            font-size: 1.2rem;
-        }
+
+    .card {
+        width: 33%;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
 }
+
 @media (max-width: 1000px) {
     .card-button {
-            font-size: 0.9rem;
-        }
+        font-size: 0.9rem;
+    }
 }
+
 @media (max-width: 900px) {
     .cards-container {
         flex-wrap: wrap;
@@ -425,15 +442,18 @@ option {
         font-size: 1.2rem;
     }
 }
+
 @media (max-width: 800px) {
-  
+
     .card-button {
-            font-size: 0.8rem;
-        }
+        font-size: 0.8rem;
+    }
+
     .card-title {
         font-size: 1.1rem;
     }
 }
+
 @media (max-width: 700px) {
     .cards-container {
         flex-wrap: wrap;
@@ -443,13 +463,15 @@ option {
         width: 67%;
         height: 70%;
     }
-          .card-title {
-              font-size: 1.4rem;
-                padding-left: 0%;
-          }
-        .card-button {
-            font-size: 0.9rem;
-        }
+
+    .card-title {
+        font-size: 1.4rem;
+        padding-left: 0%;
+    }
+
+    .card-button {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -460,13 +482,16 @@ option {
     .card-title {
         font-size: 1.2rem;
     }
-    .card-image{
+
+    .card-image {
         width: 53%;
     }
-    .card-button{
+
+    .card-button {
         font-size: 0.9rem;
     }
 }
+
 @media (max-width: 400px) {
     .card {
         width: 90%;
@@ -480,6 +505,7 @@ option {
         width: 53%;
     }
 }
+
 @media (min-width: 768px) and (max-width: 980px) {
     .dropdown-menu {
         margin-top: -12.4%;

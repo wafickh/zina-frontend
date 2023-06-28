@@ -386,7 +386,6 @@ select {
     /* Remove default Firefox styling */
     appearance: none;
     /* Remove default styling */
-    color: inherit;
     /* Inherit the color from the parent element */
 }
 

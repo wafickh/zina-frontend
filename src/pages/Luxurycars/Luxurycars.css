@@ -398,6 +398,7 @@ option {
   margin-left: -1%;
 }
 
+
 @media (max-width: 1200px) {
     .cards-container {
         flex-wrap: wrap;

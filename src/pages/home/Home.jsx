@@ -213,12 +213,12 @@ function Home() {
           <div className="contact-item">
             <HiOutlineMail className="contact-icon" />
             <h3>Email</h3>
-            <p>khalife@hotmail.com</p>
+            <p>bk@zinascars.com</p>
           </div>
           <div className="contact-item">
             <FaPhone className="contact-icon" />
             <h3>Phone Number</h3>
-            <p>888-843-4174</p>
+            <p>+1 (949) 317-6520</p>
           </div>
         </div>
       </div>

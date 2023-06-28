@@ -48,7 +48,7 @@ input:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0.9rem;
 }
 
 .form-group {
@@ -65,12 +65,13 @@ input:focus {
 .form-input {
     width: 100%;
     padding: 4px;
-        padding-left: 8px;
-        font-size: large;
+    padding-left: 8px;
+    font-size: large;
     color: #333;
     transition: border-color 0.3s ease;
 }
- input[type="text"].form-input{
+
+input[type="text"].form-input {
     padding: 4px;
     padding-left: 8px;
     font-size: large;
@@ -89,6 +90,7 @@ input:focus {
     border-radius: 4px;
     font-size: 1.1rem;
     font-weight: 600;
+    margin-top: 2%;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
     cursor: pointer;

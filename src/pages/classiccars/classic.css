@@ -14,7 +14,6 @@ body {}
     justify-content: center;
     align-items: center;
     margin-top: 3%;
-
 }
 
 input:focus {
@@ -32,7 +31,7 @@ input:focus {
     padding: 2rem;
     background-color: #562f4a32;
     border-radius: 8px;
-    box-shadow: 0 2px 6px #562F4A;
+    box-shadow: 0 2px 6px #562f4a;
 }
 
 .form-title {
@@ -40,20 +39,22 @@ input:focus {
     margin-bottom: 2rem;
     letter-spacing: 0.02cm;
     text-transform: uppercase;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: white;
 }
 
 .form-row {
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0.9rem;
+    
 }
-
 .form-group {
     width: 48%;
 }
+
 
 .form-label {
     display: block;
@@ -66,7 +67,7 @@ input:focus {
     width: 100%;
     padding: 4px;
     padding-left: 8px;
-    font-size: large;
+    font-size: medium;
     color: #333;
     transition: border-color 0.3s ease;
 }
@@ -74,29 +75,69 @@ input:focus {
 input[type="text"].form-input {
     padding: 4px;
     padding-left: 8px;
-    font-size: large;
+    font-size: medium;
 }
-
-
 
 .submit-button {
     display: block;
     width: 14%;
     margin: 0 auto;
-    padding: 0.5rem;
+    padding: 0.4rem;
     background-color: white;
-    color: #562F4A;
+    color: #562f4a;
     border: none;
     border-radius: 4px;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     font-weight: 600;
-    margin-top: 2%;
+    margin-top: 4%;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
 
 .submit-button:hover {
-    background-color: #562F4A;
+    background-color: #562f4a;
     color: white;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 767px) {
+
+    /* Styles for mobile devices */
+    .card-form {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 2%;
+    }
+
+    .submit-button {
+        width: 40%;
+    }
+           .form-row {
+               margin-bottom: 0rem;
+           }
+           .form-title{
+            font-size: 1.3rem
+           }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* Styles for tablet devices */
+    .card-form {
+        width: 80%;
+    }
+    .form-row{
+            margin-bottom: 0.7rem;
+    }
+    
 }

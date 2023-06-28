@@ -1,9 +1,11 @@
 import React from 'react'
 import Navbar from '../../components/navbar/Navbar'
+import Footer from '../../components/footer/Footer'
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import './classic.css'
 
 function Classic() {
+    
 
 
     return (
@@ -52,6 +54,7 @@ function Classic() {
                     </button>
                 </form>
             </div>
+            <Footer/>
 
         </div>
     )

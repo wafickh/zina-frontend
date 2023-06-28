@@ -334,50 +334,50 @@ function Luxurycars() {
                                     </div>
                                 </div>
                             </div>
-                                <div className="cards-container">
-                                    <div className="card">
-                                        <img
-                                            className="card-image"
-                                            src="https://res.cloudinary.com/do0puhubq/image/upload/v1686154377/car1233_scpgn8.jpg"
-                                            alt="Car 1"
-                                        />
-                                        <div className="card-content">
-                                            <h3 className="card-title">2020 Aston Martin DB11</h3>
-                                            <div className="card-buttons">
-                                                <button className="card-button"><BiMessageRounded className="message-icon" />Text Us</button>
-                                                <button className="card-button detailss" >View details</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card">
-                                        <img
-                                            className="card-image"
-                                            src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
-                                            alt="Car 2"
-                                        />
-                                        <div className="card-content">
-                                            <h3 className="card-title">2020 Aston Martin DB11</h3>
-                                            <div className="card-buttons">
-                                                <button className="card-button"><BiMessageRounded className="message-icon" />Text Us</button>
-                                                <button className="card-button detailss" >View details</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="card">
-                                        <img
-                                            className="card-image"
-                                            src="https://res.cloudinary.com/do0puhubq/image/upload/v1686154377/car1233_scpgn8.jpg"
-                                            alt="Car 3"
-                                        />
-                                        <div className="card-content">
-                                            <h3 className="card-title">2020 Aston Martin DB11 </h3>
-                                            <div className="card-buttons">
-                                                <button className="card-button"><BiMessageRounded className="message-icon" />Text Us</button>
-                                                <button className="card-button detailss" >View details</button>
-                                            </div>
+                            <div className="cards-container">
+                                <div className="card">
+                                    <img
+                                        className="card-image"
+                                        src="https://res.cloudinary.com/do0puhubq/image/upload/v1686154377/car1233_scpgn8.jpg"
+                                        alt="Car 1"
+                                    />
+                                    <div className="card-content">
+                                        <h3 className="card-title">2020 Aston Martin DB11</h3>
+                                        <div className="card-buttons">
+                                            <button className="card-button textme"><BiMessageRounded className="message-icon" />Text Us</button>
+                                            <button className="card-button detailss" >View details</button>
                                         </div>
                                     </div>
                                 </div>
+                                <div className="card">
+                                    <img
+                                        className="card-image"
+                                        src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+                                        alt="Car 2"
+                                    />
+                                    <div className="card-content">
+                                        <h3 className="card-title">2020 Aston Martin DB11</h3>
+                                        <div className="card-buttons">
+                                                <button className="card-button textme"><BiMessageRounded className="message-icon" />Text Us</button>
+                                            <button className="card-button detailss" >View details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="card">
+                                    <img
+                                        className="card-image"
+                                        src="https://res.cloudinary.com/do0puhubq/image/upload/v1686154377/car1233_scpgn8.jpg"
+                                        alt="Car 3"
+                                    />
+                                    <div className="card-content">
+                                        <h3 className="card-title">2020 Aston Martin DB11 </h3>
+                                        <div className="card-buttons">
+                                                <button className="card-button textme"><BiMessageRounded className="message-icon" />Text Us</button>
+                                            <button className="card-button detailss" >View details</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </>
                     ) : (

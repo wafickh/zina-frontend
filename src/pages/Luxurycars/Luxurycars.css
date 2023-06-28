@@ -394,6 +394,9 @@ option {
     color: black;
     /* Set the font color for options */
 }
+.card-button.textme{
+  margin-left: -1%;
+}
 
 @media (max-width: 1200px) {
     .cards-container {

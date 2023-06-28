@@ -40,7 +40,7 @@ const Email = {
 };
 
 const Navbar = () => {
-    const phoneNumber = '03818759';
+    const phoneNumber = '+1 (949) 317-6520';
     const formRef = useRef(null);
     const { addToast } = useToasts();
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -102,7 +102,7 @@ const Navbar = () => {
         }
     };
 
-    const handleFormSubmit =async (event) => {
+    const handleFormSubmit = async (event) => {
         event.preventDefault();
 
         const name = event.currentTarget.elements.name.value;
@@ -122,8 +122,8 @@ const Navbar = () => {
     `;
         setIsSubmitting(true);
 
-     await  sendEmail(emailContent);
-       setIsSubmitting(false);
+        await sendEmail(emailContent);
+        setIsSubmitting(false);
     };
 
     useEffect(() => {

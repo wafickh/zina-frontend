@@ -201,7 +201,7 @@ function Home() {
             <div className="content">
               <h2>Discover the world of luxurious, top-of-the-line vehicles today!</h2>
               {/* <p>Contact us for an amazing, hassle-free offer. Elevate your driving experience with our outstanding selection. Don't miss out—experience automotive excellence now!</p> */}
-              <p>Experience automotive excellence at Zina's Cars! Discover our exceptional selection and enjoy a seamless buying process. Whether you desire a tailored order, a rare classic automobile, or a luxurious yacht, we specialize in surpassing customer expectations.
+              <p>Experience automotive excellence at Zina's Cars! Whether you desire a tailored order, a rare classic automobile, or a luxurious yacht, we specialize in surpassing customer expectations.
                  Experience unmatched luxury and make your vision come true. Contact us today for an exceptional and professional journey.</p>
             </div>
             <button className="contact-button" onClick={handleCloseForm}>Contact Us</button>

@@ -289,20 +289,20 @@ a span {
 }
 
 .consent-label {
-    margin-top: 2%;
+    margin-top: 1.5%;
 }
 
 .contact-form-card input,
 .contact-form-card textarea {
     width: 100%;
     padding: 0.5rem;
-    margin-top: 0.3rem;
+    margin-top: 0.1rem;
     border-radius: 4px;
     border: 1px solid #ccc;
 }
 
 .consent-label {
-    font-size: 0.7rem;
+    font-size: 0.79rem;
 }
 
 .contact-form-card textarea {
@@ -464,4 +464,14 @@ a span {
         margin-top: 0.6rem;
     }
 
+}
+@media screen and (min-width: 1900px) {
+    .navbar-text {
+            font-size: 1.8rem;
+          
+        }
+        .navbar-button{
+            padding: 0.5rem 1rem;
+                font-size: 1.2rem;
+        }
 }

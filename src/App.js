@@ -13,6 +13,7 @@ import Luxurycars from "./pages/Luxurycars/Luxurycars";
 import Privacy from "./pages/privacy/Privacy";
 import Construction from "./pages/constuction/Constuction";
 import Error404 from "./pages/error/Error404";
+import Custom from "./pages/custom/Custom";
 import Classic from "./pages/classiccars/Classic";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Construction />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/classics" element={<Classic />} />
+        <Route path="/custom" element={<Custom />} />
         <Route path="/luxury-cars" element={<Luxurycars />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/error" element={<Error404 />} />

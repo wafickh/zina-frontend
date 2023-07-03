@@ -189,7 +189,7 @@ function Home() {
             <h3 className="button-title">Classic Cars Inventory</h3>
             <button className="browse-button">Browse</button>
           </a>
-          <a href="/customized-cars-yachts" className="inventory-button">
+          <a href="/custom" className="inventory-button">
             <h3 className="button-title">Customized Cars and Yachts</h3>
             <button className="browse-button">Browse</button>
           </a>

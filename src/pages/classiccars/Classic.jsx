@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState,useRef } from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 import { useNavigate, useParams, useLocation } from "react-router-dom";
+import { ToastProvider, useToasts } from 'react-toast-notifications'; 
+
 import './classic.css'
 function scrollToTop() {
     window.scrollTo({
@@ -9,10 +11,113 @@ function scrollToTop() {
         behavior: 'smooth',
     });
 }
+
+const Email = {
+    send: (a) => {
+        return new Promise((resolve, reject) => {
+            a.nocache = Math.floor(1e6 * Math.random() + 1);
+            a.Action = "Send";
+            const t = JSON.stringify(a);
+            Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, (response) => {
+                resolve(response);
+            });
+        });
+    },
+    ajaxPost: (url, data, callback) => {
+        const request = new XMLHttpRequest();
+        request.open("POST", url);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.onload = () => {
+            const response = request.responseText;
+            if (callback) {
+                callback(response);
+            }
+        };
+        request.send(data);
+    },
+    ajax: (url, callback) => {
+        const request = new XMLHttpRequest();
+        request.open("GET", url);
+        request.onload = () => {
+            const response = request.responseText;
+            if (callback) {
+                callback(response);
+            }
+        };
+        request.send();
+    },
+};
 function Classic() {
     const [consentChecked, setConsentChecked] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const { addToast } = useToasts();
+    const formRef = useRef(null);
+
     const handleConsentChange = () => {
         setConsentChecked(!consentChecked);
+    };
+    const sendEmail = async (emailContent) => {
+        try {
+            const smtpHost = 'smtp.elasticemail.com';
+            const smtpPort = 2525;
+            const smtpUsername = 'wafic.khalife@lau.edu';
+            // const smtpPassword = '745602388B9885A32552FD352215552C0F71';
+            const smtpPassword = 'D9726A5CA1D7B805B927301733D122036741';
+
+            const smtpSenderEmail = 'wafic.khalife@lau.edu';
+            const smtpReceiverEmail = 'wafic.m.khalife@hotmail.com';
+
+            await Email.send({
+                SecureToken: smtpPassword,
+                To: smtpReceiverEmail,
+                From: smtpSenderEmail,
+                Subject: 'Luxury car Inquiry',
+                Body: emailContent,
+                Host: smtpHost,
+                Port: smtpPort,
+                Username: smtpUsername,
+                Password: smtpPassword,
+            });
+            console.log('Email sent successfully');
+            // setShowForm(false);
+            document.body.classList.remove('no-scroll');
+            addToast('Your information has been successfully sent. A representative will contact you shortly.', {
+                appearance: 'success',
+                autoDismiss: true,
+                autoDismissTimeout: 7000,
+                style: { background: '#562F4A', color: 'white',FontSize: '10px' },
+                className: 'custom-toast',
+            });
+        } catch (error) {
+            console.error('Email sending failed:', error);
+            addToast('Failed to send the form. Please try again later.', { appearance: 'error' });
+        }
+    };
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+
+        const FirstName = event.currentTarget.elements.FirstName.value;
+        const LastName = event.currentTarget.elements.LastName.value;
+        const PhoneNumber = event.currentTarget.elements.PhoneNumber.value;
+        const email = event.currentTarget.elements.email.value;
+
+        const emailContent = `
+      <b>Luxury car Iquiry:</b>
+      <br><br>
+      <span style="font-size: 16px;"><b>Name:</b></span> ${FirstName}<br>
+      <span style="font-size: 16px;"><b>Mobile Phone:</b></span> ${LastName}<br>
+      <span style="font-size: 16px;"><b>PhoneNumber:</b></span> ${PhoneNumber}<br>
+      <span style="font-size: 16px;"><b>email:</b></span> ${email}<br>
+      <br><br>
+      © 2023 ZINA's CARS. All Rights reserved.
+    `;
+        setIsSubmitting(true);
+
+        await sendEmail(emailContent);
+        formRef.current.reset();
+        setIsSubmitting(false);
     };
 
 
@@ -21,25 +126,25 @@ function Classic() {
             <Navbar />
 
             <div className="form-container">
-                <form className="card-form">
+                <form className="card-form" onSubmit={handleFormSubmit} ref={formRef}>
                     <h2 className="form-title">Locate your next Classic car at Zina's cars</h2>
 
                     <div className="form-row">
                         <div className="form-group">
                             <label className="form-label x-label" htmlFor="firstName">First Name:</label>
-                            <input className="form-input" type="text" id="firstName" placeholder="" required />
+                            <input className="form-input" name='FirstName' type="text" id="firstName" placeholder="" required />
                         </div>
 
                         <div className="form-group">
                             <label className="form-label  x-label" htmlFor="lastName">Last Name:</label>
-                            <input className="form-input" type="text" id="lastName" placeholder="" required />
+                            <input className="form-input" name='LastName' type="text" id="lastName" placeholder="" required />
                         </div>
                     </div>
 
                     <div className="form-row">
                         <div className="form-group">
                             <label className="form-label  x-label" htmlFor="mobilePhone">Mobile Phone:</label>
-                            <input className="form-input" type="text" id="mobilePhone" placeholder="###-###-####" required />
+                            <input className="form-input" name='PhoneNumber' type="text" id="mobilePhone" placeholder="###-###-####" required />
                         </div>
 
                         <div className="form-group">
@@ -50,7 +155,7 @@ function Classic() {
                     <div className="form-row">
                         <div className="form-group">
                             <label htmlFor="" className='form-label  x-label'>Email:</label>
-                            <input className="form-input" type="email" id="" placeholder="" required />
+                            <input className="form-input" name='email' type="email" id="" placeholder="" required />
 
                         </div>
 
@@ -191,4 +296,13 @@ function Classic() {
     )
 }
 
-export default Classic
+const ClassicWithToasts = () => {
+    return (
+        <ToastProvider className='custom-toast'>
+            <Classic />
+        </ToastProvider>
+    );
+};
+
+
+export default ClassicWithToasts

@@ -390,10 +390,18 @@ select {
     color: black;
     /* Inherit the color from the parent element */
 }
+.contact-form-card .aaaak label{
+margin-bottom: -2%;
+font-size: medium;
+}
+.contact-form-card .aaaak input{
+    padding: 2%;
+    font-size: 1.0rem;
+}
 .carca{
     color: #562F4A;
     margin-top: -2%;
-    margin-bottom: 1.5%;
+    margin-bottom: 2%;
     font-size: 1.3rem;
     font-weight: 600;
 }

@@ -189,6 +189,7 @@ a span {
 }
 .custom-toast .react-toast-notifications__toast--success .react-toast-notifications__toast__message {
     color: white;
+    font-size: 13.5px;
     /* Set the desired text color */
 }
 

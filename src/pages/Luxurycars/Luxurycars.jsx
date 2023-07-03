@@ -124,7 +124,7 @@ const Luxurycars=()=> {
         const message = event.currentTarget.elements.message.value;
 
         const emailContent = `
-      <b>Contact Form Submission:</b>
+      <b>Luxury car Inquiry:</b>
       <br><br>
       <span style="font-size: 16px;"><b>Name:</b></span> ${name}<br>
       <span style="font-size: 16px;"><b>Mobile Phone:</b></span> ${phone}<br>
@@ -489,20 +489,20 @@ const Luxurycars=()=> {
                                                         </div>
                                                         <form onSubmit={handleFormSubmit}>
                                                             <p className='carca'>2020 Aston Martin DB11</p>
-                                                            <div className="contact-form-section">
+                                                            <div className="contact-form-section aaaak">
                                                                 <label htmlFor="name">Name:</label>
                                                                 <input type="text" id="name" name="name" required />
                                                             </div>
-                                                            <div className="contact-form-section">
+                                                            <div className="contact-form-section aaaak">
                                                                 <label htmlFor="phone">Mobile Phone:</label>
                                                                 <input type="text" id="phone" name="phone" required />
                                                             </div>
-                                                            <div className="contact-form-section">
+                                                            <div className="contact-form-section aaaak">
                                                                 <label htmlFor="email">Email:</label>
                                                                 <input type="email" id="email" name="email" required />
                                                             </div>
-                                                            <div className="contact-form-section">
-                                                                <label htmlFor="message">Message:</label>
+                                                            <div className="contact-form-section aaaak">
+                                                                <label htmlFor="message">Comments:</label>
                                                                 <textarea id="message" name="message" rows="4" required></textarea>
                                                             </div>
                                                             <div className="contact-form-section">

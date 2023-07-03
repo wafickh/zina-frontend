@@ -390,7 +390,16 @@ select {
     color: black;
     /* Inherit the color from the parent element */
 }
-
+.carca{
+    color: #562F4A;
+    margin-top: -2%;
+    margin-bottom: 1.5%;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.textmenow{
+    font-size: 1.5rem;
+}
 option {
     color: black;
     /* Set the font color for options */

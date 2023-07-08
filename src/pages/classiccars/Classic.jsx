@@ -1,8 +1,8 @@
-import React, { useState,useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { ToastProvider, useToasts } from 'react-toast-notifications'; 
+import { ToastProvider, useToasts } from 'react-toast-notifications';
 
 import './classic.css'
 function scrollToTop() {
@@ -86,7 +86,7 @@ function Classic() {
                 appearance: 'success',
                 autoDismiss: true,
                 autoDismissTimeout: 7000,
-                style: { background: '#562F4A', color: 'white',FontSize: '10px' },
+                style: { background: '#562F4A', color: 'white', FontSize: '10px' },
                 className: 'custom-toast',
             });
         } catch (error) {
@@ -119,6 +119,13 @@ function Classic() {
         formRef.current.reset();
         setIsSubmitting(false);
     };
+    const [minYear, setMinYear] = useState('');
+    const maxYearOptions = Array.from({ length: 95 }, (_, i) => 2024 - i)
+        .filter((year) => year >= minYear || !minYear);
+
+    const handleMinYearChange = (event) => {
+        setMinYear(event.target.value);
+    };
 
 
     return (
@@ -146,20 +153,71 @@ function Classic() {
                             <label className="form-label  x-label" htmlFor="mobilePhone">Mobile Phone:</label>
                             <input className="form-input" name='PhoneNumber' type="text" id="mobilePhone" placeholder="###-###-####" required />
                         </div>
-
-                        <div className="form-group">
-                            <label className="form-label " htmlFor="homePhone">Home Phone:</label>
-                            <input className="form-input" type="text" id="homePhone" placeholder="###-###-####" />
-                        </div>
-                    </div>
-                    <div className="form-row">
                         <div className="form-group">
                             <label htmlFor="" className='form-label  x-label'>Email:</label>
                             <input className="form-input" name='email' type="email" id="" placeholder="" required />
 
                         </div>
 
+
                     </div>
+                    <p className='desired'>Desired vehicle:</p>
+                    <div className="form-row">
+                        <div className="form-group">
+                            <label className="form-label x-label" htmlFor="firstName">Vehicle Make:</label>
+                            <input className="form-input" name='FirstName' type="text" id="firstName" placeholder="" required />
+                        </div>
+
+
+                    </div>
+
+                    <div className="form-row">
+                        <div className="form-group">
+                            <label className="form-label x-label" htmlFor="minYear">Minimum Vehicle Year:</label>
+                            <select className="form-select" name="minYear" id="minYear" required onChange={handleMinYearChange}>
+                                <option value=""></option>
+                                {Array.from({ length: 95 }, (_, i) => 2024 - i).map((year) => (
+                                    <option key={year} value={year}>{year}</option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <label className="form-label x-label" htmlFor="maxYear">Maximum Vehicle Year:</label>
+                            <select className="form-select" name="maxYear" id="maxYear" required>
+                                <option value=""></option>
+                                {maxYearOptions.map((year) => (
+                                    <option key={year} value={year}>{year}</option>
+                                ))}
+                            </select>
+                        </div>
+                    </div>
+                    <label className="form-label x-label" htmlFor="vehicleColor">Vehicle Color:</label>
+
+                    <div className="form-row">
+
+                        <div className="form-group cola"  >
+
+                            <input className="form-input" name="colorOption1" type="text" id="colorOption1" placeholder="Option 1" />
+                        </div>
+                        <div className="form-group cola"  >
+
+                            <input className="form-input" name="colorOption2" type="text" id="colorOption2" placeholder="Option 2" />
+                        </div>
+                        <div className="form-group cola"  >
+
+                            <input className="form-input" name="colorOption3" type="text" id="colorOption3" placeholder="Option 3" />
+                        </div>
+                    </div>
+                    <div className="form-row">
+                        <div className="form-group coki">
+                            <label className="form-label" htmlFor="carDescription">Tell us more about your classic car:</label>
+                            <textarea className="form-textarea" name="carDescription" id="carDescription" rows="4" style={{width:'100%'}}></textarea>
+                        </div>
+                    </div>
+
+
+
+
                     <div className="consent-containerr">
                         <input
                             type="checkbox"
@@ -200,28 +258,29 @@ function Classic() {
                 </div>
                 <div class="image-column">
                     <div class="image-container">
-                        <img src="/ChevroletCorvet.jpg" alt="Chevrolet Corvette 1963"></img>
+                        <img src="/rols.jpg" alt="1954 Rolls-Royce Silver Dawn"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Chevrolet Corvette 1963</div>
+                            <div class="image-text">Rolls-Royce Silver Dawn 1954</div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="image-row">
-                <div class="image-column">
-                    <div class="image-container">
-                        <img src="/FordMustang.jpg" alt="Image 3" class="image"></img>
-                        <div class="image-overlay">
-                            <div class="image-text">Ford Mustang Shelby GT350 1965</div>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="image-column">
                     <div class="image-container">
                         <img src="/ChevroletEl.jpg" alt="Image 4"></img>
                         <div class="image-overlay">
                             <div class="image-text">Chevrolet El Camino SS 1970</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/FordMustang.jpg" alt="Image 3" class="image"></img>
+                        <div class="image-overlay">
+                            <div class="image-text">Ford Mustang Shelby GT350 1965</div>
                         </div>
                     </div>
                 </div>

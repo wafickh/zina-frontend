@@ -137,7 +137,7 @@ function Classic() {
             setIsSubmitting(true);
 
             await sendEmail(emailContent);
-             setIsSubmitting(false);
+            setIsSubmitting(false);
             formRef.current.reset();
             setColorOption1('');
             setColorOption2('');

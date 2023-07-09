@@ -59,7 +59,7 @@ input:focus {
 
 .form-label {
     display: block;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.32rem;
     font-size: 1.1rem;
     color: white;
 }
@@ -370,9 +370,9 @@ input[type="text"].form-input {
         font-size: 0.98rem;
     }
         .submit-button.loadingi{
-            width: 40%;
+            width: 32%;
                 margin-top: 5%;
-                font-size: 0.8rem;
+                font-size: 0.7rem;
         }
 
     .form-row {
@@ -417,7 +417,7 @@ input[type="text"].form-input {
     margin-top: 2.4%;
     font-weight: 650;
     font-size: medium;
-    margin-bottom: 0.7%;
+    margin-bottom: 1.0%;
 }
 
 

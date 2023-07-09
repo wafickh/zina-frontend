@@ -115,7 +115,8 @@ input[type="text"].form-input {
 .image-column img {
     width: 100%;
     height: auto;
-    max-height: 30rem;
+    max-height: 29rem;
+    max-width: 45rem;
 }
 .custom-toast {
     font-size: 10px;
@@ -236,6 +237,53 @@ input[type="text"].form-input {
 
 .coki {
     width: 100%;
+}.submit-button.loadingi {
+    position: relative;
+    cursor: not-allowed;
+    background-color: transparent;
+    color: white;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+.submit-button.loadingi:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+    background-size: 50px 50px;
+    animation: loadingAnimation 1.5s linear infinite;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        transform: translateX(-150%);
+    }
+
+    100% {
+        transform: translateX(150%);
+    }
+}
+
+.subbut:active {
+    animation: buttonClickAnimation 0.3s linear;
+}
+
+@keyframes buttonClickAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 
@@ -246,9 +294,12 @@ input[type="text"].form-input {
 
     .classictitle {
         font-style: italic;
-        font-size: 1.5rem;
-        margin-top: 9%;
+        font-size: 1.7rem;
+        margin-top: 12%;
     }
+        .submit-button.loadingi{
+            font-size: 1.0rem;
+        }
 
     .image-text {
         font-size: 18px;
@@ -264,7 +315,7 @@ input[type="text"].form-input {
     .image-column img {
         width: 100%;
         height: auto;
-        max-height: 30.1rem;
+        max-height: 29.5rem;
     }
 
     .back-to-form {
@@ -284,6 +335,13 @@ input[type="text"].form-input {
 /* Responsive styles 
   
 */
+@media screen and (max-width: 1367px) {
+.submit-button {
+        width: 20%;
+        margin-top: 5%;
+        font-size: 1.0rem;
+    }
+}
 
 @media screen and (max-width: 767px) {
 
@@ -307,8 +365,9 @@ input[type="text"].form-input {
     }
 
     .submit-button {
-        width: 40%;
+        width: 35%;
         margin-top: 5%;
+        font-size: 0.98rem;
     }
 
     .form-row {

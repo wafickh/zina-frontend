@@ -72,7 +72,7 @@ function Classic() {
                 SecureToken: smtpPassword,
                 To: smtpReceiverEmail,
                 From: smtpSenderEmail,
-                Subject: 'Luxury car Inquiry',
+                Subject: 'Classic Car Inquiry',
                 Body: emailContent,
                 Host: smtpHost,
                 Port: smtpPort,
@@ -101,9 +101,7 @@ function Classic() {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(colorOption1)
-        console.log(colorOption2)
-        console.log(colorOption3)
+
 
 
 
@@ -112,20 +110,34 @@ function Classic() {
             const LastName = event.currentTarget.elements.LastName.value;
             const PhoneNumber = event.currentTarget.elements.PhoneNumber.value;
             const email = event.currentTarget.elements.email.value;
+            const make = event.currentTarget.elements.Make.value;
+            const minYear = event.currentTarget.elements.minYear.value;
+            const maxYear = event.currentTarget.elements.maxYear.value;
+            const carDescription = event.currentTarget.elements.carDescription.value;
 
             const emailContent = `
-      <b>Luxury car Iquiry:</b>
       <br><br>
-      <span style="font-size: 16px;"><b>Name:</b></span> ${FirstName}<br>
-      <span style="font-size: 16px;"><b>Mobile Phone:</b></span> ${LastName}<br>
-      <span style="font-size: 16px;"><b>PhoneNumber:</b></span> ${PhoneNumber}<br>
-      <span style="font-size: 16px;"><b>email:</b></span> ${email}<br>
+            <span style="font-size: 17px;"><b>Client Information:</b></span><br>
+      <span style="font-size: 16px;"><b>Full Name:</b></span> ${FirstName} ${LastName}<br>
+      <span style="font-size: 16px;"><b>Mobile Phone:</b></span> ${PhoneNumber}<br>
+      <span style="font-size: 16px;"><b>Email:</b></span> ${email}<br>
+       <span style="font-size: 16px;"><b>Desired classic car information:</b></span><br>
+      <span style="font-size: 16px;"><b>Vehicle Make:</b></span> ${make}<br>
+        <span style="font-size: 16px;"><b>Vehicle year:</b></span> From ${minYear} to ${maxYear}<br>
+        <span style="font-size: 16px;"><b>Vehicle Color/s:</b></span> ${colorOption1} ${colorOption2} ${colorOption3}<br>
+                <span style="font-size: 16px;"><b>Desired Features:</b></span> ${carDescription}<br>
+
+
+
+
       <br><br>
-      © 2023 ZINA's CARS. All Rights reserved.
+      <center>© 2023 ZINA's CARS. All Rights reserved.</center>
+      
     `;
             setIsSubmitting(true);
 
             await sendEmail(emailContent);
+            // setIsSubmitting(false);
             formRef.current.reset();
             setColorOption1('');
             setColorOption2('');
@@ -185,7 +197,7 @@ function Classic() {
                     <div className="form-row">
                         <div className="form-group">
                             <label className="form-label x-label" htmlFor="firstName">Vehicle Make:</label>
-                            <input className="form-input" name='FirstName' type="text" id="firstName" placeholder="" required />
+                            <input className="form-input" name='Make' type="text" id="firstName" placeholder="" required />
                         </div>
 
 
@@ -280,9 +292,8 @@ function Classic() {
                         automated messages. I can withdraw my consent by texting "STOP".
                     </p>
 
-
-                    <button type="submit" className="submit-button">
-                        Submit
+                    <button type="submit" className={`submit-button ${isSubmitting ? 'loadingi' : ''}`} disabled={isSubmitting}>
+                        {isSubmitting ? 'Submitting...' : 'Submit'}
                     </button>
 
                 </form>

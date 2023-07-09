@@ -298,7 +298,7 @@ input[type="text"].form-input {
         margin-top: 12%;
     }
         .submit-button.loadingi{
-            font-size: 1.0rem;
+            font-size: 0.9rem;
         }
 
     .image-text {
@@ -369,6 +369,11 @@ input[type="text"].form-input {
         margin-top: 5%;
         font-size: 0.98rem;
     }
+        .submit-button.loadingi{
+            width: 40%;
+                margin-top: 5%;
+                font-size: 0.8rem;
+        }
 
     .form-row {
         margin-bottom: 0rem;

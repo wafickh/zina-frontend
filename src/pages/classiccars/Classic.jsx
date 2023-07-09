@@ -85,8 +85,8 @@ function Classic() {
             addToast('Your information has been successfully sent. A representative will contact you shortly.', {
                 appearance: 'success',
                 autoDismiss: true,
-                autoDismissTimeout: 7000,
-                style: { background: '#562F4A', color: 'white', FontSize: '10px' },
+                autoDismissTimeout: 7500,
+                style: { background: '#562F4A', color: 'white', fontSize: '10px' },
                 className: 'custom-toast',
             });
         } catch (error) {
@@ -94,16 +94,26 @@ function Classic() {
             addToast('Failed to send the form. Please try again later.', { appearance: 'error' });
         }
     };
+    const [colorOption1, setColorOption1] = useState('');
+    const [colorOption2, setColorOption2] = useState('');
+    const [colorOption3, setColorOption3] = useState('');
+    const [formSubmitted, setFormSubmitted] = useState(false);
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+        console.log(colorOption1)
+        console.log(colorOption2)
+        console.log(colorOption3)
 
-        const FirstName = event.currentTarget.elements.FirstName.value;
-        const LastName = event.currentTarget.elements.LastName.value;
-        const PhoneNumber = event.currentTarget.elements.PhoneNumber.value;
-        const email = event.currentTarget.elements.email.value;
 
-        const emailContent = `
+
+        if (colorOption1 || colorOption2 || colorOption3) {
+            const FirstName = event.currentTarget.elements.FirstName.value;
+            const LastName = event.currentTarget.elements.LastName.value;
+            const PhoneNumber = event.currentTarget.elements.PhoneNumber.value;
+            const email = event.currentTarget.elements.email.value;
+
+            const emailContent = `
       <b>Luxury car Iquiry:</b>
       <br><br>
       <span style="font-size: 16px;"><b>Name:</b></span> ${FirstName}<br>
@@ -113,11 +123,19 @@ function Classic() {
       <br><br>
       © 2023 ZINA's CARS. All Rights reserved.
     `;
-        setIsSubmitting(true);
+            setIsSubmitting(true);
 
-        await sendEmail(emailContent);
-        formRef.current.reset();
-        setIsSubmitting(false);
+            await sendEmail(emailContent);
+            formRef.current.reset();
+            setColorOption1('');
+            setColorOption2('');
+            setColorOption3('');
+            setFormSubmitted(true);
+        }
+        else {
+            setFormSubmitted(false);
+
+        }
     };
     const [minYear, setMinYear] = useState('');
     const maxYearOptions = Array.from({ length: 95 }, (_, i) => 2024 - i)
@@ -126,6 +144,8 @@ function Classic() {
     const handleMinYearChange = (event) => {
         setMinYear(event.target.value);
     };
+
+
 
 
     return (
@@ -192,26 +212,49 @@ function Classic() {
                         </div>
                     </div>
                     <label className="form-label x-label" htmlFor="vehicleColor">Vehicle Color:</label>
-
                     <div className="form-row">
+                        <div className="form-group cola">
+                            <input
+                                className={`form-input ${formSubmitted && !colorOption1 ? 'invalid' : ''}`}
+                                name="colorOption1"
+                                type="text"
+                                id="colorOption1"
+                                placeholder="Option 1"
+                                value={colorOption1}
+                                onChange={(e) => setColorOption1(e.target.value)}
+                                required={!(colorOption2 || colorOption3)}
+                            />
 
-                        <div className="form-group cola"  >
-
-                            <input className="form-input" name="colorOption1" type="text" id="colorOption1" placeholder="Option 1" />
                         </div>
-                        <div className="form-group cola"  >
+                        <div className="form-group cola">
+                            <input
+                                className={`form-input`}
+                                name="colorOption2"
+                                type="text"
+                                id="colorOption2"
+                                placeholder="Option 2"
+                                value={colorOption2}
+                                onChange={(e) => setColorOption2(e.target.value)}
+                            />
 
-                            <input className="form-input" name="colorOption2" type="text" id="colorOption2" placeholder="Option 2" />
                         </div>
-                        <div className="form-group cola"  >
+                        <div className="form-group cola">
+                            <input
+                                className={`form-input`}
+                                name="colorOption3"
+                                type="text"
+                                id="colorOption3"
+                                placeholder="Option 3"
+                                value={colorOption3}
+                                onChange={(e) => setColorOption3(e.target.value)}
 
-                            <input className="form-input" name="colorOption3" type="text" id="colorOption3" placeholder="Option 3" />
+                            />
                         </div>
                     </div>
                     <div className="form-row">
                         <div className="form-group coki">
-                            <label className="form-label" htmlFor="carDescription">Tell us more about your classic car:</label>
-                            <textarea className="form-textarea" name="carDescription" id="carDescription" rows="4" style={{width:'100%'}}></textarea>
+                            <label className="form-label x-label" htmlFor="carDescription">Tell us more about your classic car:</label>
+                            <textarea className="form-textarea" name="carDescription" id="carDescription" rows="4" style={{ width: '100%' }}></textarea>
                         </div>
                     </div>
 

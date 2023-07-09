@@ -117,6 +117,29 @@ input[type="text"].form-input {
     height: auto;
     max-height: 30rem;
 }
+.custom-toast {
+    font-size: 10px;
+}
+.css-18gu508-ContentP{
+    font-size: 10px;
+}
+.react-toast-notifications__toast__content .css-18gu508-Content{
+    font-size: 5px;
+}
+.form-textarea {
+    resize: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+        border: 1px solid #ccc;
+
+}
+.form-textarea:focus{
+    outline: none;
+}
+.form-select:focus{
+    outline: none;
+    box-shadow:none
+}
 
 .image-column {
     display: flex;
@@ -210,7 +233,8 @@ input[type="text"].form-input {
 .cola {
     width: 32%;
 }
-.coki{
+
+.coki {
     width: 100%;
 }
 
@@ -277,7 +301,8 @@ input[type="text"].form-input {
         width: 100%;
         margin-bottom: 2%;
     }
-    .cola{
+
+    .cola {
         margin-bottom: 4%;
     }
 

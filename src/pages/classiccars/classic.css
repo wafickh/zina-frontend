@@ -28,9 +28,9 @@ input:focus {
 .card-form {
     width: 64%;
     padding: 2rem;
-    background-color: #562f4a32;
+    background-color: #5b394f3a;
     border-radius: 8px;
-    box-shadow: 0 2px 6px #562f4a;
+    box-shadow: 0 5px 7px #6E5986;
     margin-bottom: 2%;
 }
 
@@ -115,31 +115,37 @@ input[type="text"].form-input {
 .image-column img {
     width: 100%;
     height: auto;
-    max-height: 29rem;
-    max-width: 45rem;
+    max-height: 28rem;
+    max-width: 55rem;
 }
+
 .custom-toast {
     font-size: 10px;
 }
-.css-18gu508-ContentP{
+
+.css-18gu508-ContentP {
     font-size: 10px;
 }
-.react-toast-notifications__toast__content .css-18gu508-Content{
+
+.react-toast-notifications__toast__content .css-18gu508-Content {
     font-size: 5px;
 }
+
 .form-textarea {
     resize: none;
     padding: 0.5rem;
     border-radius: 4px;
-        border: 1px solid #ccc;
+    border: 1px solid #ccc;
 
 }
-.form-textarea:focus{
+
+.form-textarea:focus {
     outline: none;
 }
-.form-select:focus{
+
+.form-select:focus {
     outline: none;
-    box-shadow:none
+    box-shadow: none
 }
 
 .image-column {
@@ -237,7 +243,9 @@ input[type="text"].form-input {
 
 .coki {
     width: 100%;
-}.submit-button.loadingi {
+}
+
+.submit-button.loadingi {
     position: relative;
     cursor: not-allowed;
     background-color: transparent;
@@ -297,9 +305,10 @@ input[type="text"].form-input {
         font-size: 1.7rem;
         margin-top: 12%;
     }
-        .submit-button.loadingi{
-            font-size: 0.9rem;
-        }
+
+    .submit-button.loadingi {
+        font-size: 0.9rem;
+    }
 
     .image-text {
         font-size: 18px;
@@ -315,7 +324,7 @@ input[type="text"].form-input {
     .image-column img {
         width: 100%;
         height: auto;
-        max-height: 29.5rem;
+        max-height: 28.0rem;
     }
 
     .back-to-form {
@@ -336,7 +345,7 @@ input[type="text"].form-input {
   
 */
 @media screen and (max-width: 1367px) {
-.submit-button {
+    .submit-button {
         width: 20%;
         margin-top: 5%;
         font-size: 1.0rem;
@@ -369,11 +378,12 @@ input[type="text"].form-input {
         margin-top: 5%;
         font-size: 0.98rem;
     }
-        .submit-button.loadingi{
-            width: 32%;
-                margin-top: 5%;
-                font-size: 0.7rem;
-        }
+
+    .submit-button.loadingi {
+        width: 32%;
+        margin-top: 5%;
+        font-size: 0.7rem;
+    }
 
     .form-row {
         margin-bottom: 0rem;

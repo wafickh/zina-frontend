@@ -144,9 +144,12 @@ const Navbar = () => {
     return (
         <nav className="navofnav">
             <div className="navbar-container">
-                <a href="/">
+                <a href="/" className="navbar-link">
                     <span className="navbar-text">ZINA's CARS</span>
+                    <span className="navbar-slogan">Luxury for you</span>
+
                 </a>
+
                 <div className="navbar-buttons">
                     <button className="navbar-button" onClick={handleCall}>
                         Call Now

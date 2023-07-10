@@ -85,7 +85,7 @@ input[type="text"].form-input {
     margin: 0 auto;
     padding: 0.4rem;
     background-color: white;
-    color: #5b738c;
+    color: #562F4A;
     border: none;
     border-radius: 4px;
     font-size: 1.0rem;
@@ -97,7 +97,7 @@ input[type="text"].form-input {
 }
 
 .submit-button:hover {
-    background-color: #5b738ca8;
+    background-color: #562F4A;
     color: white;
 }
 
@@ -200,11 +200,11 @@ input[type="text"].form-input {
 }
 
 .back-to-form {
-    padding: 6px 16px;
+    padding: 4px 14px;
     border: none;
-    background-color: #5b738cc3;
+    background-color: #562F4A;
     color: white;
-    font-size: 17px;
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
@@ -217,7 +217,7 @@ input[type="text"].form-input {
 
 .back-to-form:hover {
     background-color: white;
-    color: #5b738c;
+    color: #562F4A;
 }
 
 .image-text {
@@ -299,6 +299,9 @@ input[type="text"].form-input {
     .image-column {
         width: 100%;
     }
+    .back-to-form{
+        font-size: 1.0rem;
+    }
 
     .classictitle {
         font-style: italic;
@@ -328,7 +331,7 @@ input[type="text"].form-input {
     }
 
     .back-to-form {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .classictitle {
@@ -377,6 +380,9 @@ input[type="text"].form-input {
         width: 35%;
         margin-top: 5%;
         font-size: 0.98rem;
+    }
+    .back-to-form{
+        font-size: 1.1rem;
     }
 
     .submit-button.loadingi {

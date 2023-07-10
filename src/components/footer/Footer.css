@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: #5b738ca8;
+    background-color: #5b394f3a;
     margin-top: 7%;
 
     position: relative;
@@ -23,7 +23,12 @@ color: inherit;
   color: white;
   font-size: small;
 }
-
+.logojj {
+  color: #FF6F61;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 1.2%;
+}
 
 mainfoot a:hover {
   color: inherit;
@@ -32,9 +37,10 @@ mainfoot a:hover {
 
 .mainfoot h2 {
     margin-top: 1%;
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
+    font-size: 1.9rem;
+    color: #89CFF0;
+    font-weight: 600;
+    margin-bottom: 0%;
 }
 
 .mainfoot p {

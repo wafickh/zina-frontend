@@ -30,7 +30,7 @@ input:focus {
     padding: 2rem;
     background-color: #5b394f3a;
     border-radius: 8px;
-    box-shadow: 0 5px 7px #6E5986;
+    box-shadow: 0 5px 7px #5b738ca8;
     margin-bottom: 2%;
 }
 
@@ -85,7 +85,7 @@ input[type="text"].form-input {
     margin: 0 auto;
     padding: 0.4rem;
     background-color: white;
-    color: #562f4a;
+    color: #5b738c;
     border: none;
     border-radius: 4px;
     font-size: 1.0rem;
@@ -97,7 +97,7 @@ input[type="text"].form-input {
 }
 
 .submit-button:hover {
-    background-color: #562f4a;
+    background-color: #5b738ca8;
     color: white;
 }
 
@@ -202,9 +202,9 @@ input[type="text"].form-input {
 .back-to-form {
     padding: 6px 16px;
     border: none;
-    background-color: #562f4a;
-    color: #fff;
-    font-size: 14px;
+    background-color: #5b738cc3;
+    color: white;
+    font-size: 17px;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
@@ -217,7 +217,7 @@ input[type="text"].form-input {
 
 .back-to-form:hover {
     background-color: white;
-    color: #562f4a;
+    color: #5b738c;
 }
 
 .image-text {

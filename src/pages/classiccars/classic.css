@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3%;
+    margin-top: 4.9%;
 }
 
 input:focus {
@@ -190,8 +190,9 @@ input[type="text"].form-input {
 
 .classictitle {
     font-style: italic;
-    font-size: 1.8rem;
-    margin-top: 4%;
+    font-size: 2.2rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .center {
@@ -306,7 +307,7 @@ input[type="text"].form-input {
     .classictitle {
         font-style: italic;
         font-size: 1.7rem;
-        margin-top: 12%;
+        margin-top: 5%;
     }
 
     .submit-button.loadingi {
@@ -335,7 +336,7 @@ input[type="text"].form-input {
     }
 
     .classictitle {
-        font-size: 2.1rem;
+        font-size: 2.2rem;
     }
 
     .form-title {

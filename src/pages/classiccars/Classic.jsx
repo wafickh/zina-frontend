@@ -163,144 +163,10 @@ function Classic() {
     return (
         <div>
             <Navbar />
-
-            <div className="form-container">
-                <form className="card-form" onSubmit={handleFormSubmit} ref={formRef}>
-                    <h2 className="form-title">Locate your next Classic car at Zina's cars</h2>
-
-                    <div className="form-row">
-                        <div className="form-group">
-                            <label className="form-label x-label" htmlFor="firstName">First Name:</label>
-                            <input className="form-input" name='FirstName' type="text" id="firstName" placeholder="" required />
-                        </div>
-
-                        <div className="form-group">
-                            <label className="form-label  x-label" htmlFor="lastName">Last Name:</label>
-                            <input className="form-input" name='LastName' type="text" id="lastName" placeholder="" required />
-                        </div>
-                    </div>
-
-                    <div className="form-row">
-                        <div className="form-group">
-                            <label className="form-label  x-label" htmlFor="mobilePhone">Mobile Phone:</label>
-                            <input className="form-input" name='PhoneNumber' type="text" id="mobilePhone" placeholder="###-###-####" required />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="" className='form-label  x-label'>Email:</label>
-                            <input className="form-input" name='email' type="email" id="" placeholder="" required />
-
-                        </div>
-
-
-                    </div>
-                    <p className='desired'>Desired vehicle:</p>
-                    <div className="form-row">
-                        <div className="form-group">
-                            <label className="form-label x-label" htmlFor="firstName">Vehicle Make:</label>
-                            <input className="form-input" name='Make' type="text" id="firstName" placeholder="" required />
-                        </div>
-
-
-                    </div>
-
-                    <div className="form-row">
-                        <div className="form-group">
-                            <label className="form-label x-label" htmlFor="minYear">Minimum Vehicle Year:</label>
-                            <select className="form-select" name="minYear" id="minYear" required onChange={handleMinYearChange}>
-                                <option value=""></option>
-                                {Array.from({ length: 95 }, (_, i) => 2024 - i).map((year) => (
-                                    <option key={year} value={year}>{year}</option>
-                                ))}
-                            </select>
-                        </div>
-                        <div className="form-group">
-                            <label className="form-label x-label" htmlFor="maxYear">Maximum Vehicle Year:</label>
-                            <select className="form-select" name="maxYear" id="maxYear" required>
-                                <option value=""></option>
-                                {maxYearOptions.map((year) => (
-                                    <option key={year} value={year}>{year}</option>
-                                ))}
-                            </select>
-                        </div>
-                    </div>
-                    <label className="form-label x-label" htmlFor="vehicleColor">Vehicle Color:</label>
-                    <div className="form-row">
-                        <div className="form-group cola">
-                            <input
-                                className={`form-input ${formSubmitted && !colorOption1 ? 'invalid' : ''}`}
-                                name="colorOption1"
-                                type="text"
-                                id="colorOption1"
-                                placeholder="Option 1"
-                                value={colorOption1}
-                                onChange={(e) => setColorOption1(e.target.value)}
-                                required={!(colorOption2 || colorOption3)}
-                            />
-
-                        </div>
-                        <div className="form-group cola">
-                            <input
-                                className={`form-input`}
-                                name="colorOption2"
-                                type="text"
-                                id="colorOption2"
-                                placeholder="Option 2"
-                                value={colorOption2}
-                                onChange={(e) => setColorOption2(e.target.value)}
-                            />
-
-                        </div>
-                        <div className="form-group cola">
-                            <input
-                                className={`form-input`}
-                                name="colorOption3"
-                                type="text"
-                                id="colorOption3"
-                                placeholder="Option 3"
-                                value={colorOption3}
-                                onChange={(e) => setColorOption3(e.target.value)}
-
-                            />
-                        </div>
-                    </div>
-                    <div className="form-row">
-                        <div className="form-group coki">
-                            <label className="form-label x-label" htmlFor="carDescription">Tell us more about your classic car:</label>
-                            <textarea className="form-textarea" name="carDescription" id="carDescription" rows="4" style={{ width: '100%' }}></textarea>
-                        </div>
-                    </div>
-
-
-
-
-                    <div className="consent-containerr">
-                        <input
-                            type="checkbox"
-                            id="consenting"
-                            name="consenting"
-                            checked={consentChecked}
-                            required
-                            onChange={handleConsentChange}
-                        />
-                        <label htmlFor="consenting" className="consent-label lololi">
-                            ACKNOWLEDGMENT AND CONSENT:
-                        </label>
-                    </div>
-                    <p className='textind'>
-                        I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                        understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                        automated messages. I can withdraw my consent by texting "STOP".
-                    </p>
-
-                    <button type="submit" className={`submit-button ${isSubmitting ? 'loadingi' : ''}`} disabled={isSubmitting}>
-                        {isSubmitting ? 'Submitting...' : 'Submit'}
-                    </button>
-
-                </form>
-            </div>
             <center>
                 <h2 className='classictitle'>Classic cars gallery</h2>
             </center>
+
             <div class="image-row">
                 <div class="image-column">
                     <div class="image-container">
@@ -502,12 +368,147 @@ function Classic() {
                     </div>
                 </div>
             </div>
+            <div className="form-container">
+                <form className="card-form" onSubmit={handleFormSubmit} ref={formRef}>
+                    <h2 className="form-title">Locate your next Classic car at Zina's cars</h2>
 
+                    <div className="form-row">
+                        <div className="form-group">
+                            <label className="form-label x-label" htmlFor="firstName">First Name:</label>
+                            <input className="form-input" name='FirstName' type="text" id="firstName" placeholder="" required />
+                        </div>
+
+                        <div className="form-group">
+                            <label className="form-label  x-label" htmlFor="lastName">Last Name:</label>
+                            <input className="form-input" name='LastName' type="text" id="lastName" placeholder="" required />
+                        </div>
+                    </div>
+
+                    <div className="form-row">
+                        <div className="form-group">
+                            <label className="form-label  x-label" htmlFor="mobilePhone">Mobile Phone:</label>
+                            <input className="form-input" name='PhoneNumber' type="text" id="mobilePhone" placeholder="###-###-####" required />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="" className='form-label  x-label'>Email:</label>
+                            <input className="form-input" name='email' type="email" id="" placeholder="" required />
+
+                        </div>
+
+
+                    </div>
+                    <p className='desired'>Desired vehicle:</p>
+                    <div className="form-row">
+                        <div className="form-group">
+                            <label className="form-label x-label" htmlFor="firstName">Vehicle Make:</label>
+                            <input className="form-input" name='Make' type="text" id="firstName" placeholder="" required />
+                        </div>
+
+
+                    </div>
+
+                    <div className="form-row">
+                        <div className="form-group">
+                            <label className="form-label x-label" htmlFor="minYear">Minimum Vehicle Year:</label>
+                            <select className="form-select" name="minYear" id="minYear" required onChange={handleMinYearChange}>
+                                <option value=""></option>
+                                {Array.from({ length: 95 }, (_, i) => 2024 - i).map((year) => (
+                                    <option key={year} value={year}>{year}</option>
+                                ))}
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <label className="form-label x-label" htmlFor="maxYear">Maximum Vehicle Year:</label>
+                            <select className="form-select" name="maxYear" id="maxYear" required>
+                                <option value=""></option>
+                                {maxYearOptions.map((year) => (
+                                    <option key={year} value={year}>{year}</option>
+                                ))}
+                            </select>
+                        </div>
+                    </div>
+                    <label className="form-label x-label" htmlFor="vehicleColor">Vehicle Color:</label>
+                    <div className="form-row">
+                        <div className="form-group cola">
+                            <input
+                                className={`form-input ${formSubmitted && !colorOption1 ? 'invalid' : ''}`}
+                                name="colorOption1"
+                                type="text"
+                                id="colorOption1"
+                                placeholder="Option 1"
+                                value={colorOption1}
+                                onChange={(e) => setColorOption1(e.target.value)}
+                                required={!(colorOption2 || colorOption3)}
+                            />
+
+                        </div>
+                        <div className="form-group cola">
+                            <input
+                                className={`form-input`}
+                                name="colorOption2"
+                                type="text"
+                                id="colorOption2"
+                                placeholder="Option 2"
+                                value={colorOption2}
+                                onChange={(e) => setColorOption2(e.target.value)}
+                            />
+
+                        </div>
+                        <div className="form-group cola">
+                            <input
+                                className={`form-input`}
+                                name="colorOption3"
+                                type="text"
+                                id="colorOption3"
+                                placeholder="Option 3"
+                                value={colorOption3}
+                                onChange={(e) => setColorOption3(e.target.value)}
+
+                            />
+                        </div>
+                    </div>
+                    <div className="form-row">
+                        <div className="form-group coki">
+                            <label className="form-label x-label" htmlFor="carDescription">Tell us more about your classic car:</label>
+                            <textarea className="form-textarea" name="carDescription" id="carDescription" rows="4" style={{ width: '100%' }}></textarea>
+                        </div>
+                    </div>
+
+
+
+
+                    <div className="consent-containerr">
+                        <input
+                            type="checkbox"
+                            id="consenting"
+                            name="consenting"
+                            checked={consentChecked}
+                            required
+                            onChange={handleConsentChange}
+                        />
+                        <label htmlFor="consenting" className="consent-label lololi">
+                            ACKNOWLEDGMENT AND CONSENT:
+                        </label>
+                    </div>
+                    <p className='textind'>
+                        I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
+                        understand that message and data rates may apply. This is my written consent to receive texts and calls, including
+                        automated messages. I can withdraw my consent by texting "STOP".
+                    </p>
+
+                    <button type="submit" className={`submit-button ${isSubmitting ? 'loadingi' : ''}`} disabled={isSubmitting}>
+                        {isSubmitting ? 'Submitting...' : 'Submit'}
+                    </button>
+
+                </form>
+            </div>
+            
+{/* 
             <div className="center">
                 <button className="back-to-form" onClick={scrollToTop}>
                     <span className="arrow"></span> Make an Order <span class="arrow"></span>
                 </button>
-            </div>
+            </div> */}
 
 
 

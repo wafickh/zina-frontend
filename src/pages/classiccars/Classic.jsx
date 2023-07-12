@@ -66,7 +66,7 @@ function Classic() {
             const smtpPassword = 'D9726A5CA1D7B805B927301733D122036741';
 
             const smtpSenderEmail = 'wafic.khalife@lau.edu';
-            const smtpReceiverEmail = 'wafic.m.khalife@hotmail.com';
+            const smtpReceiverEmail = 'bk@zinascars.com';
 
             await Email.send({
                 SecureToken: smtpPassword,
@@ -351,6 +351,60 @@ function Classic() {
                         <img src="/fer1.jpg" alt="1972 Ferrari 365 GTC/4"></img>
                         <div class="image-overlay">
                             <div class="image-text"> Ferrari 365 GTC/4 1972</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/fer9.jpg" alt="1979 Ferrari 308 GTS #27437"></img>
+                        <div class="image-overlay">
+                            <div class="image-text"> Ferrari 308 GTS 1979</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/fer99.jpg" alt="1989 Ferrari 328 GTS"></img>
+                        <div class="image-overlay">
+                            <div class="image-text">  Ferrari 328 GTS 1989</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/fer11.jpg" alt="1972 Ferrari 246 GTS Dino"></img>
+                        <div class="image-overlay">
+                            <div class="image-text">  Ferrari 246 GTS Dino 1972</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/fer12.jpg" alt="Ferrari 308 GTB “Vetroresina” 1976"></img>
+                        <div class="image-overlay">
+                            <div class="image-text">  Ferrari 308 GTB “Vetroresina” 1976</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/fer32.jpg" alt="1961 Ferrari 250 PF Cabriolet"></img>
+                        <div class="image-overlay">
+                            <div class="image-text">  Ferrari 250 PF Cabriolet 1961</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/fer46.jpg" alt="1971 Ferrari 206 SP"></img>
+                        <div class="image-overlay">
+                            <div class="image-text">  Ferrari 206 SP 1971</div>
                         </div>
                     </div>
                 </div>

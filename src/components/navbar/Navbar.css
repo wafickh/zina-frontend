@@ -194,7 +194,7 @@ a span {
 }
 
 .navbar-text {
-    font-size: 2.34rem;
+    font-size: 2.42rem;
     color: #FF6F61;
     /* color: #db364f; */
 }
@@ -422,9 +422,9 @@ a span {
 
 .navbar-slogan {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #FF6F61;
-    margin-top: -0.9rem;
+    margin-top: -1rem;
     margin-bottom: 0.6rem;
 }
 .contact-form-card {

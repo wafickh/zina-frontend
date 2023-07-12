@@ -304,6 +304,60 @@ function Classic() {
             <div class="image-row">
                 <div class="image-column">
                     <div class="image-container">
+                        <img src="/fer55.jpg" alt="1989 Ferrari Testarossa"></img>
+                        <div class="image-overlay">
+                            <div class="image-text">Ferrari Testarossa 1989 </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/fer6.jpg" alt="Ferrari 330 GTC 1967"></img>
+                        <div class="image-overlay">
+                            <div class="image-text">Ferrari 330 GTC 1967</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/fer2.jpg" alt="1972 Ferrari 365 GTB/4C Daytona Comp conversion"></img>
+                        <div class="image-overlay">
+                            <div class="image-text"> Ferrari 365 GTB/4C 1972</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/fer3.jpg" alt="1967 Ferrari 330 GT 2+2"></img>
+                        <div class="image-overlay">
+                            <div class="image-text"> Ferrari 330 GT 2+2 1967</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/bug.jpg" alt="1937 Bugatti Type 57"></img>
+                        <div class="image-overlay">
+                            <div class="image-text"> Bugatti Type 57 1937</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="/fer1.jpg" alt="1972 Ferrari 365 GTC/4"></img>
+                        <div class="image-overlay">
+                            <div class="image-text"> Ferrari 365 GTC/4 1972</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-column">
+                    <div class="image-container">
                         <img src="/AstonMartin.jpg" alt="Aston Martin DB5 1964"></img>
                         <div class="image-overlay">
                             <div class="image-text">Aston Martin DB5 1964</div>

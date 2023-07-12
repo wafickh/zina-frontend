@@ -172,7 +172,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/fer55.jpg" alt="1989 Ferrari Testarossa"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Ferrari Testarossa 1989 </div>
+                            <div class="image-text">Ferrari Testarossa 1989
+                                <center><p className='pricetagi'>Price: $149,500</p></center>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -180,7 +183,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/fer6.jpg" alt="Ferrari 330 GTC 1967"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Ferrari 330 GTC 1967</div>
+                            <div class="image-text">Ferrari 330 GTC 1967
+                                <center><p className='pricetagi'>Price: $549,950</p></center>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -190,7 +196,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/fer2.jpg" alt="1972 Ferrari 365 GTB/4C Daytona Comp conversion"></img>
                         <div class="image-overlay">
-                            <div class="image-text"> Ferrari 365 GTB/4C 1972</div>
+                            <div class="image-text"> Ferrari 365 GTB/4C 1972
+                                <center><p className='pricetagi'>Price: $646,774 </p></center>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -198,7 +207,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/fer3.jpg" alt="1967 Ferrari 330 GT 2+2"></img>
                         <div class="image-overlay">
-                            <div class="image-text"> Ferrari 330 GT 2+2 1967</div>
+                            <div class="image-text"> Ferrari 330 GT 2+2 1967
+                                <center><p className='pricetagi'>Price: $295,000</p></center>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -208,7 +220,11 @@ function Classic() {
                     <div class="image-container">
                         <img src="/bug.jpg" alt="1937 Bugatti Type 57"></img>
                         <div class="image-overlay">
-                            <div class="image-text"> Bugatti Type 57 1937</div>
+                            <div class="image-text"> Bugatti Type 57 1937
+                                <center><p className='pricetagi'>Price: $3,735,000</p></center>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -216,7 +232,11 @@ function Classic() {
                     <div class="image-container">
                         <img src="/fer1.jpg" alt="1972 Ferrari 365 GTC/4"></img>
                         <div class="image-overlay">
-                            <div class="image-text"> Ferrari 365 GTC/4 1972</div>
+                            <div class="image-text"> Ferrari 365 GTC/4 1972
+                                <center><p className='pricetagi'>Price: $159,500</p></center>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -226,7 +246,11 @@ function Classic() {
                     <div class="image-container">
                         <img src="/fer9.jpg" alt="1979 Ferrari 308 GTS #27437"></img>
                         <div class="image-overlay">
-                            <div class="image-text"> Ferrari 308 GTS 1979</div>
+                            <div class="image-text"> Ferrari 308 GTS 1979
+                                <center><p className='pricetagi'>Price: $67,500</p></center>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -234,7 +258,11 @@ function Classic() {
                     <div class="image-container">
                         <img src="/fer99.jpg" alt="1989 Ferrari 328 GTS"></img>
                         <div class="image-overlay">
-                            <div class="image-text">  Ferrari 328 GTS 1989</div>
+                            <div class="image-text">  Ferrari 328 GTS 1989
+                                <center><p className='pricetagi'>Price: $89,950</p></center>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -244,7 +272,11 @@ function Classic() {
                     <div class="image-container">
                         <img src="/fer11.jpg" alt="1972 Ferrari 246 GTS Dino"></img>
                         <div class="image-overlay">
-                            <div class="image-text">  Ferrari 246 GTS Dino 1972</div>
+                            <div class="image-text">  Ferrari 246 GTS Dino 1972
+                                <center><p className='pricetagi'>Price: $467,500</p></center>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -252,7 +284,11 @@ function Classic() {
                     <div class="image-container">
                         <img src="/fer12.jpg" alt="Ferrari 308 GTB “Vetroresina” 1976"></img>
                         <div class="image-overlay">
-                            <div class="image-text">  Ferrari 308 GTB “Vetroresina” 1976</div>
+                            <div class="image-text">  Ferrari 308 GTB “Vetroresina” 1976
+                                <center><p className='pricetagi'>Price: $139,950</p></center>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -262,7 +298,11 @@ function Classic() {
                     <div class="image-container">
                         <img src="/fer32.jpg" alt="1961 Ferrari 250 PF Cabriolet"></img>
                         <div class="image-overlay">
-                            <div class="image-text">  Ferrari 250 PF Cabriolet 1961</div>
+                            <div class="image-text">  Ferrari 250 PF Cabriolet 1961
+                                <center><p className='pricetagi'>Price: $1,295,000</p></center>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -270,7 +310,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/fer46.jpg" alt="1971 Ferrari 206 SP"></img>
                         <div class="image-overlay">
-                            <div class="image-text">  Ferrari 206 SP 1971</div>
+                            <div class="image-text">  Ferrari 206 SP 1971
+                                <center><p className='pricetagi'>Price: $395,000</p></center>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -280,7 +323,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/AstonMartin.jpg" alt="Aston Martin DB5 1964"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Aston Martin DB5 1964</div>
+                            <div class="image-text">Aston Martin DB5 1964
+                                <center><p className='pricetagi'>Price: $990,000</p></center>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -288,7 +334,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/rols.jpg" alt="1954 Rolls-Royce Silver Dawn"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Rolls-Royce Silver Dawn 1954</div>
+                            <div class="image-text">Rolls-Royce Silver Dawn 1954
+                                <center><p className='pricetagi'>Price: $149,500</p></center>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -300,7 +349,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/ChevroletEl.jpg" alt="Image 4"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Chevrolet El Camino SS 1970</div>
+                            <div class="image-text">Chevrolet El Camino SS 1970
+                                <center><p className='pricetagi'>Price: $149,500</p></center>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -308,7 +360,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/FordMustang.jpg" alt="Image 3" class="image"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Ford Mustang Shelby GT350 1965</div>
+                            <div class="image-text">Ford Mustang Shelby GT350 1965
+                                <center><p className='pricetagi'>Price: $149,500</p></center>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -319,7 +374,11 @@ function Classic() {
                     <div class="image-container">
                         <img src="/merrceded19.jpg" alt="Image 5"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Mercedes 300SL Gullwing 1954</div>
+                            <div class="image-text">Mercedes 300SL Gullwing 1954
+                                <center><p className='pricetagi'>Price: $149,500</p></center>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -327,7 +386,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/porshe911.jpg" alt="Image 6"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Porsche 911 1963</div>
+                            <div class="image-text">Porsche 911 1963
+                                <center><p className='pricetagi'>Price: $149,500</p></center>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -337,7 +399,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/bmw.jpg" alt="BMW CSL 1972"></img>
                         <div class="image-overlay">
-                            <div class="image-text">BMW CSL 1972</div>
+                            <div class="image-text">BMW CSL 1972
+                                <center><p className='pricetagi'>Price: $149,500</p></center>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -345,7 +410,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/jaguar3.jpg" alt="Jaguar E-Type 1961"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Jaguar E-Type 1961</div>
+                            <div class="image-text">Jaguar E-Type 1961
+                                <center><p className='pricetagi'>Price: $149,500</p></center>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -355,7 +423,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/doge2.jpg" alt="Dodge Viper 1995"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Dodge Viper 1995</div>
+                            <div class="image-text">Dodge Viper 1995
+                                <center><p className='pricetagi'>Price: $149,500</p></center>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -363,7 +434,10 @@ function Classic() {
                     <div class="image-container">
                         <img src="/jaguarxj.jpg" alt="Jaguar XJS 1989"></img>
                         <div class="image-overlay">
-                            <div class="image-text">Jaguar XJS 1989</div>
+                            <div class="image-text">Jaguar XJS 1989
+                                <center><p className='pricetagi'>Price: $149,500</p></center>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -502,8 +576,8 @@ function Classic() {
 
                 </form>
             </div>
-            
-{/* 
+
+            {/* 
             <div className="center">
                 <button className="back-to-form" onClick={scrollToTop}>
                     <span className="arrow"></span> Make an Order <span class="arrow"></span>

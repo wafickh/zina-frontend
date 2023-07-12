@@ -317,6 +317,9 @@ input[type="text"].form-input {
     .image-text {
         font-size: 18px;
     }
+    .pricetagi{
+        font-size: 16px;
+    }
 
     .cola {
         width: 98%;

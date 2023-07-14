@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Zina's cars",
+  "name": "ZINA'S CARS",
+  "description": "Discover the world of luxurious, top-of-the-line vehicles today! Experience automotive excellence at Zina's Cars! Whether you desire a tailored order, a rare classic automobile, or a luxurious yacht, we specialize in surpassing customer expectations. Experience unmatched luxury and make your vision come true. Contact us today for an exceptional and professional journey.",
   "icons": [
     {
       "src": "favicon.ico",

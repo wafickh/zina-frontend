@@ -299,7 +299,12 @@ select {
     margin-right: 1rem;
     margin-left: -0.17rem;
 }
-
+.colledata{
+    margin-top: 7%;
+    max-width: 90%;
+    font-size:1.9rem;
+    margin-bottom: 5%;
+}
 .reset-button {
     font-size: small;
     background-color: #562F4A;
@@ -529,6 +534,11 @@ option {
     .card-button {
         font-size: 0.9rem;
     }
+        .colledata {
+            margin-top: 8%;
+            font-size: 1.4rem;
+            margin-bottom: 7%;
+        }
 }
 
 @media (max-width: 400px) {

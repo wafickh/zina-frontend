@@ -8,6 +8,9 @@ import { FaChevronRight } from 'react-icons/fa';
 import { FaChevronLeft } from 'react-icons/fa';
 import { BeatLoader } from 'react-spinners';
 import { BiMessageRounded } from "react-icons/bi";
+
+import { IoCarSportSharp } from "react-icons/io5";
+import { FaTools, FaHardHat, FaCog } from 'react-icons/fa';
 import { ToastProvider, useToasts } from 'react-toast-notifications';
 
 const Email = {
@@ -356,8 +359,8 @@ const Luxurycars=()=> {
     return (
         <div>
             <Navbar />
-            <center className='pagename'><h3>Luxury Cars Inventory</h3></center>
-            <div className="button-containerr button-container">
+            {/* <center className='pagename'><h3>Used Cars Inventory</h3></center> */}
+            {/* <div className="button-containerr button-container">
                 <button className="filter-button" onClick={handleToggleDropdown}>
                     <FaFilter className="filter-icon" />
                     Filter Vehicles
@@ -583,10 +586,20 @@ const Luxurycars=()=> {
 
 
                 </>
-            )}
+            )} */}
+            <center><h2 className='colledata'>Upgrading Our Used Car Inventory: Data Collection in Progress</h2></center>
 
-
-
+            <div className="construction-icons">
+                <div className="construction-icon">
+                    <FaTools />
+                </div>
+                <div className="construction-icon">
+                    <IoCarSportSharp />
+                </div>
+                <div className="construction-icon rotating">
+                    <FaCog />
+                </div>
+            </div>
             <Footer />
 
 

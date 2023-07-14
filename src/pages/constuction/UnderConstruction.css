@@ -24,17 +24,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 24rem;
 }
 
 .construction-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 130px;
-    height: 130px;
-    font-size: 6rem;
-    color: #ff9800;
+    width: 100px;
+    height: 100px;
+    font-size: 4rem;
+    color: #89CFF0;
     background-color: #562f4a;
     border-radius: 50%;
     box-shadow: 0 0 20px #562f4a;
@@ -44,7 +44,7 @@
 
 .construction-icon:hover {
     transform: translateY(-10px);
-    background-color: rgba(255, 152, 0, 0.5);
+    background-color: #FF6F61;
 }
 
 .rotating {
@@ -115,8 +115,8 @@
     }
 
     .construction-icon {
-        width: 90px;
-        height: 90px;
+        width: 65px;
+        height: 65px;
         font-size: 3rem;
     }
 
@@ -148,9 +148,9 @@
     }
 
     .construction-icon {
-        width: 100px;
-        height: 100px;
-        font-size: 4rem;
+        width: 70px;
+        height: 70px;
+        font-size: 3rem;
     }
 
     .message {

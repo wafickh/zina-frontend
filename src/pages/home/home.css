@@ -25,13 +25,14 @@ select {
 }
 
 .slogan {
-        font-size: 2.1rem;
+        font-size: 2.7rem;
         font-weight: 400;
         margin-bottom: 4.5rem;
         color: white;
         font-style: italic;
-        letter-spacing: 0.02cm;
-        /* font-style: italic; */
+        letter-spacing: 0.04cm;
+        font-style: italic;
+        color: #FF6F61;
 
 }
 
@@ -69,7 +70,11 @@ select {
 }
 
 .inventory-button:hover .browse-button {
-        background-color: #fd9137;
+        background-image: linear-gradient(45deg, transparent 50%,#FF6F61 50%);
+}
+.inventory-button:hover .browse-button {
+        background-color: #FF6F61;
+        color: white;
 }
 
 a {
@@ -109,7 +114,7 @@ p {
 }
 
 .contact-button {
-        padding: 0.75rem 1.5rem;
+        padding: 0.6rem 1.4rem;
         background-color: #562F4A;
         color: white;
         border: none;
@@ -120,7 +125,7 @@ p {
 }
 
 .contact-button:hover {
-        background-color: #fd9137;
+        background-color: #FF6F61;
 }
 
 
@@ -227,13 +232,17 @@ p {
         }
 }
 
-@media (max-width: 1068px) {
+@media (max-width: 1100px) {
         .contact-info {
-                max-width: 38%;
+                max-width: 36%;
         }
 }
-
-@media (max-width: 750px) {
+@media (max-width: 858px) {
+        .contact-info {
+                max-width: 39%;
+        }
+}
+@media (max-width: 760px) {
         .contact-info {
                 max-width: 49%;
         }
@@ -241,7 +250,7 @@ p {
 
 @media (max-width: 650px) {
         .contact-info {
-                max-width: 57%;
+                max-width: 59%;
         }
 }
 
@@ -261,8 +270,9 @@ p {
         }
 
         .slogan {
-                font-size: 1.7rem;
-                margin-bottom: 2.2rem;
+                font-size: 2.04rem;
+                margin-bottom: 2.3rem;
+                margin-top: -2.5%;
         }
 
         .button-title {
@@ -279,13 +289,13 @@ p {
         }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
         .contact-info {
-                max-width: 75%;
+                max-width: 73%;
         }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 405px) {
         .contact-info {
                 max-width: 90%;
         }

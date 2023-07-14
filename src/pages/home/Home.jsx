@@ -3,7 +3,7 @@ import "./home.css";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import { FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
-import { ToastProvider, useToasts } from 'react-toast-notifications'; 
+import { ToastProvider, useToasts } from 'react-toast-notifications';
 
 import { HiOutlineMail } from 'react-icons/hi';
 
@@ -76,7 +76,7 @@ function Home() {
   const handleConsentChange = () => {
     setConsentChecked(!consentChecked);
   };
-  
+
   const [showForm, setShowForm] = useState(false);
 
   const handleCloseForm = () => {
@@ -89,7 +89,7 @@ function Home() {
     document.body.classList.remove('no-scroll');
   };
 
-  
+
   const sendEmail = async (emailContent) => {
     try {
       const smtpHost = 'smtp.elasticemail.com';
@@ -99,13 +99,13 @@ function Home() {
       const smtpPassword = 'D9726A5CA1D7B805B927301733D122036741';
 
       const smtpSenderEmail = 'wafic.khalife@lau.edu';
-      const smtpReceiverEmail = 'wafic.m.khalife@hotmail.com';
+      const smtpReceiverEmail = 'bk@zinascars.com';
 
       await Email.send({
         SecureToken: smtpPassword,
         To: smtpReceiverEmail,
         From: smtpSenderEmail,
-        Subject: 'Contact us Form Submission',
+        Subject: 'Client Inquiry',
         Body: emailContent,
         Host: smtpHost,
         Port: smtpPort,
@@ -137,7 +137,7 @@ function Home() {
     const message = event.currentTarget.elements.message.value;
 
     const emailContent = `
-      <b>Contact Form Submission:</b>
+      <b>A client sent you this message:</b>
       <br><br>
       <span style="font-size: 16px;"><b>Name:</b></span> ${name}<br>
       <span style="font-size: 16px;"><b>Mobile Phone:</b></span> ${phone}<br>
@@ -179,10 +179,10 @@ function Home() {
         ))}
       </div>
       <div className="home-container">
-        <h1 className="slogan">Where Luxury Meets Convenience</h1>
+        <h1 className="slogan">Luxury for you</h1>
         <div className="button-container">
-          <a href="/luxury-cars" className="inventory-button">
-            <h3 className="button-title">Luxury Cars Inventory</h3>
+          <a href="/used" className="inventory-button">
+            <h3 className="button-title">Used Cars Inventory</h3>
             <button className="browse-button">Browse</button>
           </a>
           <a href="/classics" className="inventory-button">
@@ -202,7 +202,7 @@ function Home() {
               <h2>Discover the world of luxurious, top-of-the-line vehicles today!</h2>
               {/* <p>Contact us for an amazing, hassle-free offer. Elevate your driving experience with our outstanding selection. Don't miss out—experience automotive excellence now!</p> */}
               <p>Experience automotive excellence at Zina's Cars! Whether you desire a tailored order, a rare classic automobile, or a luxurious yacht, we specialize in surpassing customer expectations.
-                 Experience unmatched luxury and make your vision come true. Contact us today for an exceptional and professional journey.</p>
+                Experience unmatched luxury and make your vision come true. Contact us today for an exceptional and professional journey.</p>
             </div>
             <button className="contact-button" onClick={handleCloseForm}>Contact Us</button>
           </div>

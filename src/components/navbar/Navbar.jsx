@@ -73,13 +73,13 @@ const Navbar = () => {
             const smtpPassword = 'D9726A5CA1D7B805B927301733D122036741';
 
             const smtpSenderEmail = 'wafic.khalife@lau.edu';
-            const smtpReceiverEmail = 'wafic.m.khalife@hotmail.com';
+            const smtpReceiverEmail = 'bk@zinascars.com';
 
             await Email.send({
                 SecureToken: smtpPassword,
                 To: smtpReceiverEmail,
                 From: smtpSenderEmail,
-                Subject: 'Contact us Form Submission',
+                Subject: 'Client Inquiry',
                 Body: emailContent,
                 Host: smtpHost,
                 Port: smtpPort,
@@ -111,7 +111,7 @@ const Navbar = () => {
         const message = event.currentTarget.elements.message.value;
 
         const emailContent = `
-      <b>Contact Form Submission:</b>
+      <b>A client sent you a message:</b>
       <br><br>
       <span style="font-size: 16px;"><b>Name:</b></span> ${name}<br>
       <span style="font-size: 16px;"><b>Mobile Phone:</b></span> ${phone}<br>

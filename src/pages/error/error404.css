@@ -1,6 +1,30 @@
 .ho{
     margin-top: 5%;
+    margin-bottom: 3%;
 }
 .ho h1{
-    color: #562F4A;
+    color: white;
+}
+.backhome {
+    padding: 0.6rem 1.4rem;
+    background-color: #562F4A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.backhome:hover {
+    background-color: #FF6F61;
+}
+@media (max-width: 520px) {
+    .ho h1{
+        font-size: 1.6rem;
+        margin-top: 15%;
+    }
+    .backhome{
+        font-size: 1rem;
+    }
 }

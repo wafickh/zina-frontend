@@ -335,7 +335,7 @@ function Classic() {
                         <img src="/rols.jpg" alt="1954 Rolls-Royce Silver Dawn"></img>
                         <div class="image-overlay">
                             <div class="image-text">Rolls-Royce Silver Dawn 1954
-                                <center><p className='pricetagi'>Price: $149,500</p></center>
+                                <center><p className='pricetagi'>Price: $400,000</p></center>
 
                             </div>
                         </div>
@@ -350,7 +350,7 @@ function Classic() {
                         <img src="/ChevroletEl.jpg" alt="Image 4"></img>
                         <div class="image-overlay">
                             <div class="image-text">Chevrolet El Camino SS 1970
-                                <center><p className='pricetagi'>Price: $149,500</p></center>
+                                <center><p className='pricetagi'>Price: $33,000</p></center>
 
                             </div>
                         </div>
@@ -361,7 +361,7 @@ function Classic() {
                         <img src="/FordMustang.jpg" alt="Image 3" class="image"></img>
                         <div class="image-overlay">
                             <div class="image-text">Ford Mustang Shelby GT350 1965
-                                <center><p className='pricetagi'>Price: $149,500</p></center>
+                                <center><p className='pricetagi'>Price: $575,000</p></center>
 
                             </div>
                         </div>
@@ -375,7 +375,7 @@ function Classic() {
                         <img src="/merrceded19.jpg" alt="Image 5"></img>
                         <div class="image-overlay">
                             <div class="image-text">Mercedes 300SL Gullwing 1954
-                                <center><p className='pricetagi'>Price: $149,500</p></center>
+                                <center><p className='pricetagi'>Price: $1,600,000</p></center>
 
                             </div>
 
@@ -400,7 +400,7 @@ function Classic() {
                         <img src="/bmw.jpg" alt="BMW CSL 1972"></img>
                         <div class="image-overlay">
                             <div class="image-text">BMW CSL 1972
-                                <center><p className='pricetagi'>Price: $149,500</p></center>
+                                <center><p className='pricetagi'>Price: $216,000</p></center>
 
                             </div>
                         </div>
@@ -411,7 +411,7 @@ function Classic() {
                         <img src="/jaguar3.jpg" alt="Jaguar E-Type 1961"></img>
                         <div class="image-overlay">
                             <div class="image-text">Jaguar E-Type 1961
-                                <center><p className='pricetagi'>Price: $149,500</p></center>
+                                <center><p className='pricetagi'>Price: $125,000</p></center>
 
                             </div>
                         </div>
@@ -424,7 +424,7 @@ function Classic() {
                         <img src="/doge2.jpg" alt="Dodge Viper 1995"></img>
                         <div class="image-overlay">
                             <div class="image-text">Dodge Viper 1995
-                                <center><p className='pricetagi'>Price: $149,500</p></center>
+                                <center><p className='pricetagi'>Price: $60,000</p></center>
 
                             </div>
                         </div>
@@ -435,7 +435,7 @@ function Classic() {
                         <img src="/jaguarxj.jpg" alt="Jaguar XJS 1989"></img>
                         <div class="image-overlay">
                             <div class="image-text">Jaguar XJS 1989
-                                <center><p className='pricetagi'>Price: $149,500</p></center>
+                                <center><p className='pricetagi'>Price: $20,000</p></center>
 
                             </div>
                         </div>

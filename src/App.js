@@ -5,6 +5,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate 
 
 } from "react-router-dom";
 
@@ -23,13 +24,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Construction />} />
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/classics" element={<Classic />} />
         <Route path="/custom" element={<Custom />} />
-        <Route path="/luxury-cars" element={<Luxurycars />} />
+        <Route path="/used" element={<Luxurycars />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/error" element={<Error404 />} />
+        <Route path="*" element={<Navigate to="/error" replace />} />
       </Routes>
     </BrowserRouter>
   );

@@ -24,6 +24,9 @@
 
     font-weight: 600;
 }
+.slidi .image-text{
+    font-weight: 600;
+}
 @media (max-width: 1158px) {
     .slidi {
         height: 500px;
@@ -42,6 +45,9 @@
 @media (max-width: 703px) {
     .slidi {
         height: 350px;
+    }
+    .slidi .image-text{
+        font-size: 1.5rem;
     }
 }
 @media (max-width: 603px) {

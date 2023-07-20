@@ -1,9 +1,11 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef ,useEffect} from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { ToastProvider, useToasts } from 'react-toast-notifications';
 import '../classiccars/classic.css'
+import './custom.css'
+import Slider from 'react-slick';
 function scrollToTop() {
     window.scrollTo({
         top: 0,
@@ -157,6 +159,59 @@ function Custom() {
         setMinYear(event.target.value);
     };
 
+    const [slideIndex, setSlideIndex] = useState(0);
+
+    // Array of slide images
+    const slideImages = [
+       
+        {
+            url: './porshe99.jpg',
+            caption: 'Porshe 911 2018'
+        },
+        {
+            url: './lambod.jpg',
+            caption: 'lamborghini aventador 2018'
+        },
+        {
+            url: './fordi.jpg',
+            caption: 'Ford Mustang 1970'
+        },
+        {
+            url: './yato.jpg',
+            caption: 'Fairline Squadron 65 2015'
+        },
+        {
+            url: './chev.jpg',
+            caption: 'Chevrolet Camaro 2017'
+        },
+        {
+            url: './soso.jpg',
+            caption: 'Sunseeker Predator 74 2019'
+        },
+        {
+            url: './nissan1.jpg',
+            caption: 'Nissan GTR 2014'
+        }, 
+        {
+            url: './ferrarif12.jpg',
+            caption: 'Ferrari f12 2016'
+        }
+    ];
+
+    useEffect(() => {
+        // Auto advance the slider every 7 seconds
+        const interval = setInterval(() => {
+            setSlideIndex(prevIndex =>
+                prevIndex === slideImages.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 7000);
+
+        return () => {
+            // Clean up the interval on component unmount
+            clearInterval(interval);
+        };
+    }, []);
+
 
 
 
@@ -168,98 +223,24 @@ function Custom() {
             <center>
                 <h2 className='classictitle'>Customized cars and Yachts gallery</h2>
             </center>
-            <div class="image-row">
-                <div class="image-column">
-                    <div class="image-container">
-                        <img src="/fordi.jpg" alt="1970 Ford Mustang"></img>
-                        <div class="image-overlay">
-                            <div class="image-text"> Ford Mustang 1970</div>
+            <div>
+                <div className="slidi">
+                    {slideImages.map((imageData, index) => (
+                        <div
+                            key={index}
+                            className={`slide ${index === slideIndex ? 'active' : ''}`}
+                            style={{ backgroundImage: `url(${imageData.url})` }}
+                        >
+                            <div className="image-overlay">
+                                <div className="image-text texto">{imageData.caption}</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="image-column">
-                    <div class="image-container">
-                        <img src="/porshe99.jpg" alt="Porshe 911 2018"></img>
-                        <div class="image-overlay">
-                            <div class="image-text">Porshe 911 2018</div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
-
-            <div class="image-row">
-                <div class="image-column">
-                    <div class="image-container">
-                        <img src="yato.jpg" alt="Fairline Squadron 65 2015" class="image"></img>
-                        <div class="image-overlay">
-                            <div class="image-text">Fairline Squadron 65 2015</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-column">
-                    <div class="image-container">
-                        <img src="soso.jpg" alt="Sunseeker Predator 74 2019"></img>
-                        <div class="image-overlay">
-                            <div class="image-text">Sunseeker Predator 74 2019</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-row">
-                <div class="image-column">
-                    <div class="image-container">
-                        <img src="chev.jpg" alt="Chevrolet Camaro 2017"></img>
-                        <div class="image-overlay">
-                            <div class="image-text">Chevrolet Camaro 2017</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-column do">
-                    <div class="image-container">
-                        <img src="/nissan1.jpg" alt="Nissan GTR 2014"></img>
-                        <div class="image-overlay">
-                            <div class="image-text">Nissan GTR 2014</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="image-row">
-                <div class="image-column">
-                    <div class="image-container">
-                        <img src="/lambod.jpg" alt="lamborghini aventador 2018"></img>
-                        <div class="image-overlay">
-                            <div class="image-text">lamborghini aventador 2018</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-column">
-                    <div class="image-container">
-                        <img src="/ferrarif12.jpg" alt="ferrari f12 2016"></img>
-                        <div class="image-overlay">
-                            <div class="image-text">Ferrari f12 2016</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="image-row">
-                <div class="image-column">
-                    <div class="image-container">
-                        <img src="/cadi.jpg" alt="Cadillac CTS-V"></img>
-                        <div class="image-overlay">
-                            <div class="image-text">Cadillac CTS-V 2016</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-column">
-                    <div class="image-container">
-                        <img src="/rango.jpg" alt="Range Rover"></img>
-                        <div class="image-overlay">
-                            <div class="image-text">Range Rover 2009    </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+           
+            
             <div className="form-container">
                 <form className="card-form" onSubmit={handleFormSubmit} ref={formRef}>
                     <h2 className="form-title">Locate your next Custom car/yacht at Zina's cars</h2>

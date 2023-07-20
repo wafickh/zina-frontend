@@ -323,7 +323,8 @@ a span {
 }
 
 .contact-form-card button[type='submit']:hover {
-    background-color: #f1c964d7;
+    background-color: #FF6F61;
+
 }
 
 .contact-form-card {
@@ -370,7 +371,7 @@ a span {
 
 
 .contact-form-card button[type='submit']:hover {
-    background-color: #fd9137;
+    background-color: #FF6F61;
 
 }
 

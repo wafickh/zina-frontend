@@ -1,0 +1,76 @@
+
+.slidi {
+    width: 94%;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-top: 3%;
+    
+    
+    height: 39rem;
+    overflow: hidden;
+    position: relative;
+}
+.slidi:hover .image-overlay {
+    opacity: 1;
+    transform: scale(1);
+    /* Scale overlay to 100% on hover */
+}
+.slidi:hover .image-text {
+    transform: translateY(0);
+    /* Move text upward on hover */
+}
+.texto{
+    font-size: 2rem;
+
+    font-weight: 600;
+}
+@media (max-width: 1158px) {
+    .slidi {
+        height: 500px;
+    }
+        .slidi {
+            width: 100%;
+            margin-right: 0%;
+            margin-left: 0%;
+        }
+}
+@media (max-width: 938px) {
+    .slidi {
+        height: 380px;
+    }
+}
+@media (max-width: 703px) {
+    .slidi {
+        height: 350px;
+    }
+}
+@media (max-width: 603px) {
+    .slidi {
+        height: 304px;
+    }
+}
+@media (max-width: 503px) {
+    .slidi {
+        height: 265px;
+    }
+}
+@media (max-width: 450px) {
+    .slidi {
+        height: 240px;
+    }
+}
+@media (max-width: 407px) {
+    .slidi {
+        height: 230px;
+    }
+}
+@media (max-width: 382px) {
+    .slidi {
+        height: 210px;
+    }
+}
+@media (max-width: 352px) {
+    .slidi {
+        height: 190px;
+    }
+}

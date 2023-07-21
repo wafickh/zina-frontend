@@ -170,7 +170,7 @@ function Custom() {
         },
         {
             url: './lambod.jpg',
-            caption: 'lamborghini aventador 2018'
+            caption: 'Lamborghini Aventador 2018'
         },
         {
             url: './fordi.jpg',
@@ -194,7 +194,7 @@ function Custom() {
         }, 
         {
             url: './ferrarif12.jpg',
-            caption: 'Ferrari f12 2016'
+            caption: 'Ferrari F12 2016'
         }
     ];
 
@@ -204,7 +204,7 @@ function Custom() {
             setSlideIndex(prevIndex =>
                 prevIndex === slideImages.length - 1 ? 0 : prevIndex + 1
             );
-        }, 7000);
+        }, 6500);
 
         return () => {
             // Clean up the interval on component unmount
@@ -221,7 +221,7 @@ function Custom() {
 
            
             <center>
-                <h2 className='classictitle'>Customized cars and Yachts gallery</h2>
+                <h2 className='classictitle'>Customized Cars and Yachts</h2>
             </center>
             <div>
                 <div className="slidi">

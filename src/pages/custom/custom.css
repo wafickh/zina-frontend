@@ -1,12 +1,12 @@
 
 .slidi {
-    width: 94%;
+    width: 92%;
     margin-right: 3%;
-    margin-left: 3%;
-    margin-top: 3%;
+    margin-left: 4%;
+    margin-top: 4%;
     
     
-    height: 39rem;
+    height: 37rem;
     overflow: hidden;
     position: relative;
 }
@@ -47,7 +47,7 @@
         height: 350px;
     }
     .slidi .image-text{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
 @media (max-width: 603px) {

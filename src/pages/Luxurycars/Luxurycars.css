@@ -299,12 +299,14 @@ select {
     margin-right: 1rem;
     margin-left: -0.17rem;
 }
-.colledata{
+
+.colledata {
     margin-top: 7%;
     max-width: 90%;
-    font-size:1.9rem;
+    font-size: 1.9rem;
     margin-bottom: 5%;
 }
+
 .reset-button {
     font-size: small;
     background-color: #562F4A;
@@ -322,41 +324,70 @@ select {
 .card {
     width: 23%;
     background-color: #030303;
-    box-shadow: 0 5px 3px #562F4A;
+    box-shadow: 0 5px 6px #562F4A;
     overflow: hidden;
     position: relative;
     /* Add this line */
 }
 
 .card-image {
-    width: 52%;
-    height: 68%;
+    width: 54%;
+    height: 9.2rem;
     object-fit: cover;
     float: left;
 }
 
 .card-content {
     overflow: hidden;
-    padding: 35px 1px;
+    padding: 22px 2px
 
 }
 
 .card-title {
     margin-bottom: 10px;
     position: absolute;
-    top: 6px;
-    right: 16px;
-    font-size: 1.25rem;
+    top: 3px;
+    right: 18px;
+    font-size: 1.34rem;
     width: 40%;
     padding-left: 2%;
-    color: rgba(204, 204, 204, 0.8);
+    color: rgba(204, 204, 204, 0.812);
     white-space: normal;
     /* Update this line */
     overflow: hidden;
     text-overflow: ellipsis;
-    font-weight: 400;
+    font-weight: 500;
 }
+.prico{
+        position: absolute;
+        top: 105px;
+        right: 16px;
+        font-size: 1.1rem;
+        width: 40%;
+        padding-left: 2.5%;
+        color: rgba(204, 204, 204, 0.812);
+        white-space: normal;
+        /* Update this line */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 400;
+}
+.amountt{
+        margin-bottom: 80px;
+position: absolute;
+    top: 122px;
+    right: 16px;
+    font-size: 1.33rem;
+    width: 40%;
+    padding-left: 2.5%;
+    color: rgba(204, 204, 204, 0.812);
+    white-space: normal;
+    /* Update this line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 600;
 
+}
 .card-buttons {
     display: flex;
     justify-content: space-evenly;
@@ -366,11 +397,13 @@ select {
 }
 
 .card-button {
-    width: 50%;
-    padding: 8px 12px;
+    width: 100%;
+    padding: 6px 10px;
     border: none;
+
     background-color: #562F4A;
     color: #fff;
+    
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -382,7 +415,7 @@ select {
 }
 
 .card-button:hover {
-    background-color: #fd9137;
+    background-color: #FF6F61;
 }
 
 select {
@@ -395,24 +428,29 @@ select {
     color: black;
     /* Inherit the color from the parent element */
 }
-.contact-form-card .aaaak label{
-margin-bottom: -2%;
-font-size: medium;
+
+.contact-form-card .aaaak label {
+    margin-bottom: -2%;
+    font-size: medium;
 }
-.contact-form-card .aaaak input{
+
+.contact-form-card .aaaak input {
     padding: 2%;
     font-size: 1.0rem;
 }
-.carca{
+
+.carca {
     color: #562F4A;
     margin-top: -2%;
     margin-bottom: 2%;
     font-size: 1.3rem;
     font-weight: 600;
 }
-.textmenow{
+
+.textmenow {
     font-size: 1.5rem;
 }
+
 option {
     color: black;
     /* Set the font color for options */
@@ -433,7 +471,7 @@ option {
     }
 
     .card-title {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -534,11 +572,12 @@ option {
     .card-button {
         font-size: 0.9rem;
     }
-        .colledata {
-            margin-top: 8%;
-            font-size: 1.4rem;
-            margin-bottom: 7%;
-        }
+
+    .colledata {
+        margin-top: 8%;
+        font-size: 1.4rem;
+        margin-bottom: 7%;
+    }
 }
 
 @media (max-width: 400px) {
@@ -632,5 +671,47 @@ option {
 
     .dropdown-menu {
         max-width: 100%;
+    }
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Add flex-wrap property */
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 calc(30% - 20px);
+    /* Adjust width to 30% with a 20px gap between cards */
+    max-width: 350px;
+    /* Set a maximum width for each card */
+    background-color: #030303;
+    box-shadow: 0 5px 3px #562F4A;
+    overflow: hidden;
+    position: relative;
+    margin: 10px;
+    /* Add some margin between cards */
+}
+
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(33.33% - 20px);
+        /* Adjust width to 33.33% with a 20px gap between cards */
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+        /* Adjust width to 50% with a 20px gap between cards */
+    }
+}
+
+@media (max-width: 700px) {
+    .card {
+        flex: 1 1 calc(100% - 20px);
+        /* Full width with a 20px gap between cards on small screens */
     }
 }

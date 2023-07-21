@@ -474,12 +474,12 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src="./porshe1.jpg"
-                        alt="Car 1"
+                        alt="2020 Porsche Macan"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2020 Porsche Macan</h3>
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$46,881</p>
+                        <p className='amountt'>$53,280</p>
 
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
@@ -495,7 +495,7 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2020 Porsche Macan</p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />
@@ -552,12 +552,12 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src="./porshe8.jpg"
-                        alt="Car 1"
+                        alt="2021 Porsche Panamera"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2021 Porsche Panamera</h3>
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$116,981</p>
+                        <p className='amountt'>$126,600</p>
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
                             {/* <button className="card-button detailss" >View details</button> */}
@@ -572,7 +572,7 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2021 Porsche Panamera</p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />
@@ -627,12 +627,12 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src="./porshe12.jpg"
-                        alt="Car 1"
+                        alt="2019 Porsche Cayenne"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2019 Porsche Cayenne</h3>
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$86,981</p>
+                        <p className='amountt'>$91,681</p>
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
                             {/* <button className="card-button detailss" >View details</button> */}
@@ -647,7 +647,7 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2019 Porsche Cayenne</p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />
@@ -702,12 +702,12 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src="./porshe23.jpg"
-                        alt="Car 1"
+                        alt="2020 Porsche Panamera"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2020 Porsche Panamera</h3>
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$78,881</p>
+                        <p className='amountt'>$85,581</p>
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
                             {/* <button className="card-button detailss" >View details</button> */}
@@ -722,7 +722,7 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2020 Porsche Panamera</p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />
@@ -777,13 +777,14 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src='https://www.privatecollectionmotors.com/imagetag/475/main/l/Used-2017-Rolls-Royce-Dawn-1687633714.jpg'
-                        alt="Car 1"
+                        alt="2017 Rolls-Royce
+                            Dawn"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2017 Rolls-Royce
                             Dawn</h3>
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$209,995</p>
+                        <p className='amountt'>$219,295</p>
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
                             {/* <button className="card-button detailss" >View details</button> */}
@@ -798,7 +799,8 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2017 Rolls-Royce
+                                            Dawn</p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />
@@ -853,14 +855,15 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src="https://www.privatecollectionmotors.com/imagetag/471/main/l/Used-2017-Aston-Martin-DB11-Launch-Edition-Launch-Edition-1686730975.jpg"
-                        alt="Car 1"
+                        alt="2017 Aston Martin
+                            DB11"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2017 Aston Martin
                             DB11</h3>
 
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$119,995</p>
+                        <p className='amountt'>$129,795</p>
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
                             {/* <button className="card-button detailss" >View details</button> */}
@@ -875,7 +878,8 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2017 Aston Martin
+                                            DB11</p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />
@@ -930,14 +934,15 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src="https://www.privatecollectionmotors.com/imagetag/435/main/l/Used-2018-Bentley-Bentayga-Onyx-Edition-Onyx-Edition-1684878499.jpg"
-                        alt="Car 1"
+                        alt="2018 Bentley
+                            Bentayga"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2018 Bentley
                             Bentayga </h3>
 
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$109,995</p>
+                        <p className='amountt'>$118,295</p>
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
                             {/* <button className="card-button detailss" >View details</button> */}
@@ -952,7 +957,8 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2018 Bentley
+                                            Bentayga </p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />
@@ -1009,14 +1015,15 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src="https://www.privatecollectionmotors.com/imagetag/461/main/l/Used-2010-Bentley-Continental-Supersports-Supersports-1686240687.jpg"
-                        alt="Car 1"
+                        alt="2010 Bentley
+                            Continental"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2010 Bentley
                             Continental</h3>
 
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$87,995 </p>
+                        <p className='amountt'>$94,995 </p>
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
                             {/* <button className="card-button detailss" >View details</button> */}
@@ -1031,7 +1038,8 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2010 Bentley
+                                            Continental</p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />
@@ -1088,14 +1096,15 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src="https://www.privatecollectionmotors.com/imagetag/131/main/l/Used-2005-Maserati-GranSport-1654949322.jpg"
-                        alt="Car 1"
+                        alt="2005 Maserati
+                            GranSport"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2005 Maserati
                             GranSport</h3>
 
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$29,995 </p>
+                        <p className='amountt'>$35,995 </p>
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
                             {/* <button className="card-button detailss" >View details</button> */}
@@ -1110,7 +1119,8 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2005 Maserati
+                                            GranSport</p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />
@@ -1167,13 +1177,13 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src="https://www.privatecollectionmotors.com/imagetag/413/main/l/Used-2017-Mercedes-Benz-G-63-AMG-Designo-G-class-AMG-G-63-1682951968.jpg"
-                        alt="Car 1"
+                        alt="2017 Mercedes G 63 AMG"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2017 Mercedes G 63 AMG</h3>
 
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$114,995 </p>
+                        <p className='amountt'>$124,795 </p>
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
                             {/* <button className="card-button detailss" >View details</button> */}
@@ -1188,7 +1198,7 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2017 Mercedes G 63 AMG</p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />
@@ -1245,14 +1255,15 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src="./mayb.jpg"
-                        alt="Car 1"
+                        alt="2005 Maybach
+                            62"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2005 Maybach
                             62</h3>
 
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$159,995</p>
+                        <p className='amountt'>$169,395</p>
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
                             {/* <button className="card-button detailss" >View details</button> */}
@@ -1267,7 +1278,8 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2005 Maybach
+                                            62</p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />
@@ -1324,14 +1336,15 @@ const Luxurycars = () => {
                     <img
                         className="card-image"
                         src="https://www.privatecollectionmotors.com/imagetag/164/main/l/Used-2008-Maybach-57-1657816680.jpg"
-                        alt="Car 1"
+                        alt="2008 Maybach
+                            57"
                     />
                     <div className="card-content">
                         <h3 className="card-title">2008 Maybach
                             57</h3>
 
                         <p className='prico'>Price</p>
-                        <p className='amountt'>$119,995</p>
+                        <p className='amountt'>$129,995</p>
                         <div className="card-buttons">
                             <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
                             {/* <button className="card-button detailss" >View details</button> */}
@@ -1346,7 +1359,8 @@ const Luxurycars = () => {
                                         <h2 className='textmenow'>Text Us</h2>
                                     </div>
                                     <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Aston Martin DB11</p>
+                                        <p className='carca'>2008 Maybach
+                                            57</p>
                                         <div className="contact-form-section aaaak">
                                             <label htmlFor="name">Name:</label>
                                             <input type="text" id="name" name="name" required />

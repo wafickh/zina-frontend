@@ -87,7 +87,7 @@ function Custom() {
             addToast('Your information has been successfully sent. A representative will contact you shortly.', {
                 appearance: 'success',
                 autoDismiss: true,
-                autoDismissTimeout: 7500,
+                autoDismissTimeout: 6000,
                 style: { background: '#562F4A', color: 'white', fontSize: '10px' },
                 className: 'custom-toast',
             });

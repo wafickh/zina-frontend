@@ -70,13 +70,13 @@ const Luxurycars = () => {
             const smtpPassword = 'D9726A5CA1D7B805B927301733D122036741';
 
             const smtpSenderEmail = 'wafic.khalife@lau.edu';
-            const smtpReceiverEmail = 'wafic.m.khalife@hotmail.com';
+            const smtpReceiverEmail = 'bk@zinascars.com';
 
             await Email.send({
                 SecureToken: smtpPassword,
                 To: smtpReceiverEmail,
                 From: smtpSenderEmail,
-                Subject: 'Contact us Form Submission',
+                Subject: 'Used car Inquiry',
                 Body: emailContent,
                 Host: smtpHost,
                 Port: smtpPort,
@@ -127,9 +127,12 @@ const Luxurycars = () => {
         const message = event.currentTarget.elements.message.value;
 
         const emailContent = `
-      <b>Luxury car Inquiry:</b>
+      <b style="font-size: 18px;">Used car Inquiry:</b>
       <br><br>
-      <span style="font-size: 16px;"><b>Name:</b></span> ${name}<br>
+            <span style="font-size: 16px;"><b>Car name:</b></span>  ${clickedCardTitle}<br>
+
+
+      <span style="font-size: 16px;"><b>Client name:</b></span> ${name}<br>
       <span style="font-size: 16px;"><b>Mobile Phone:</b></span> ${phone}<br>
       <span style="font-size: 16px;"><b>Email:</b></span> ${email}<br>
       <span style="font-size: 16px;"><b>Message:</b></span> ${message}<br>
@@ -294,6 +297,7 @@ const Luxurycars = () => {
 
         setCurrentPage(1); // Reset page number when changing sort options
     };
+    const [clickedCardTitle, setClickedCardTitle] = useState(-1);
 
     const handleInputChange = (event) => {
         if (event.key === 'Enter') {
@@ -345,15 +349,88 @@ const Luxurycars = () => {
 
     const [showForm, setShowForm] = useState(false);
 
-    const handleCloseForm = () => {
+    const handleCloseForm = (title) => {
+        setClickedCardTitle(title);
         setShowForm(true);
+        console.log(title)
         document.body.classList.add('no-scroll');
     };
 
     const handleCloseFormm = () => {
+        setClickedCardTitle(null);
         setShowForm(false);
         document.body.classList.remove('no-scroll');
     };
+    const CardData = [
+
+        {
+            title: '2019 Porsche Cayenne',
+            imageSrc: 'https://res.cloudinary.com/do0puhubq/image/upload/v1690303528/porshe12_ndjebd.jpg',
+            price: '$91,681',
+        },
+        {
+            title: '2020 Porsche Panamera',
+            imageSrc: 'https://res.cloudinary.com/do0puhubq/image/upload/v1690303461/porshe23_r2cocg.jpg',
+            price: '$85,581',
+        },
+        {
+            title: '2017 Rolls-Royce Dawn',
+            imageSrc:
+                'https://www.privatecollectionmotors.com/imagetag/475/main/l/Used-2017-Rolls-Royce-Dawn-1687633714.jpg',
+            price: '$219,295',
+        }, {
+            title: '2005 Maybach 62',
+            imageSrc: 'https://res.cloudinary.com/do0puhubq/image/upload/v1690303372/mayb_upeygj.jpg',
+            price: '$169,395',
+        },
+        {
+            title: '2008 Maybach 57',
+            imageSrc:
+                'https://www.privatecollectionmotors.com/imagetag/164/main/l/Used-2008-Maybach-57-1657816680.jpg',
+            price: '$129,995',
+        },
+        {
+            title: '2017 Aston Martin DB11',
+            imageSrc:
+                'https://www.privatecollectionmotors.com/imagetag/471/main/l/Used-2017-Aston-Martin-DB11-Launch-Edition-Launch-Edition-1686730975.jpg',
+            price: '$129,795',
+        }, {
+            title: '2020 Porsche Macan',
+            imageSrc: 'https://res.cloudinary.com/do0puhubq/image/upload/v1690303507/porshe1_huofvh.jpg',
+            price: '$53,280',
+        },
+        {
+            title: '2021 Porsche Panamera',
+            imageSrc: 'https://res.cloudinary.com/do0puhubq/image/upload/v1690303517/porshe8_l0szmv.jpg',
+            price: '$126,600',
+        },
+        {
+            title: '2018 Bentley Bentayga',
+            imageSrc:
+                'https://www.privatecollectionmotors.com/imagetag/435/main/l/Used-2018-Bentley-Bentayga-Onyx-Edition-Onyx-Edition-1684878499.jpg',
+            price: '$118,295',
+        },
+        {
+            title: '2010 Bentley Continental',
+            imageSrc:
+                'https://www.privatecollectionmotors.com/imagetag/461/main/l/Used-2010-Bentley-Continental-Supersports-Supersports-1686240687.jpg',
+            price: '$94,995',
+        },
+        {
+            title: '2005 Maserati GranSport',
+            imageSrc:
+                'https://www.privatecollectionmotors.com/imagetag/131/main/l/Used-2005-Maserati-GranSport-1654949322.jpg',
+            price: '$35,995',
+        },
+        {
+            title: '2017 Mercedes G 63 AMG',
+            imageSrc:
+                'https://www.privatecollectionmotors.com/imagetag/413/main/l/Used-2017-Mercedes-Benz-G-63-AMG-Designo-G-class-AMG-G-63-1682951968.jpg',
+            price: '$124,795',
+        },
+
+    ];
+
 
 
     return (
@@ -470,947 +547,83 @@ const Luxurycars = () => {
                                 </div> */}
             </div>
             <div className="cards-container">
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src="./porshe1.jpg"
-                        alt="2020 Porsche Macan"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2020 Porsche Macan</h3>
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$53,280</p>
-
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
-                        </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
-                                    </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Porsche Macan</p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
-                                </div>
+                {CardData.map((card, index) => (
+                    <div className="card" key={index}>
+                        <img
+                            className="card-image"
+                            src={card.imageSrc}
+                            alt={card.title}
+                        />
+                        <div className="card-content">
+                            <h3 className="card-title">{card.title}</h3>
+                            <p className='prico'>Price</p>
+                            <p className='amountt'>{card.price}</p>
+                            <div className="card-buttons">
+                                <button className="card-button textme" onClick={() => handleCloseForm(card.title)}><BiMessageRounded className="message-icon" />Text Us</button>
+                                {/* <button className="card-button detailss" >View details</button> */}
                             </div>
-                        )}
-                    </div>
-                </div>
+                            {showForm && clickedCardTitle === card.title && (
+                                <div className="contact-form-overlay">
+                                    <div className="contact-form-card" ref={formRef}>
+                                        <div className="contact-form-header">
+                                            <button className="close-button" onClick={handleCloseFormm}>
+                                                ✘
+                                            </button>
+                                            <h2 className='textmenow'>Text Us</h2>
+                                        </div>
+                                        <form onSubmit={handleFormSubmit}>
+                                            <p className='carca'>{card.title}</p>
+                                            <div className="contact-form-section aaaak">
+                                                <label htmlFor="name">Name:</label>
+                                                <input type="text" id="name" name="name" required />
+                                            </div>
+                                            <div className="contact-form-section aaaak">
+                                                <label htmlFor="phone">Mobile Phone:</label>
+                                                <input type="text" id="phone" name="phone" required />
+                                            </div>
+                                            <div className="contact-form-section aaaak">
+                                                <label htmlFor="email">Email:</label>
+                                                <input type="email" id="email" name="email" required />
+                                            </div>
+                                            <div className="contact-form-section aaaak">
+                                                <label htmlFor="message">Comments:</label>
+                                                <textarea id="message" name="message" rows="4" required></textarea>
+                                            </div>
+                                            <div className="contact-form-section">
+                                                <div className="consent-container">
+                                                    <input
+                                                        type="checkbox"
+                                                        id="consent"
+                                                        name="consent"
+                                                        checked={consentChecked}
+                                                        required
+                                                        onChange={handleConsentChange}
+                                                    />
+                                                    <label htmlFor="consent" className="consent-label">
+                                                        ACKNOWLEDGMENT AND CONSENT:
+                                                    </label>
+                                                </div>
+                                                <div className="consent-text">
+                                                    <p>
+                                                        I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
+                                                        understand that message and data rates may apply. This is my written consent to receive texts and calls, including
+                                                        automated messages. I can withdraw my consent by texting "STOP".
+                                                    </p>
+                                                </div>
+                                                <center>
+                                                    <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
+                                                        {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
+                                                    </button>
 
-
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src="./porshe8.jpg"
-                        alt="2021 Porsche Panamera"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2021 Porsche Panamera</h3>
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$126,600</p>
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
-                        </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
+                                                </center>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2021 Porsche Panamera</p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
                                 </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src="./porshe12.jpg"
-                        alt="2019 Porsche Cayenne"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2019 Porsche Cayenne</h3>
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$91,681</p>
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
+                            )}
                         </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
-                                    </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2019 Porsche Cayenne</p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        )}
                     </div>
-                </div>
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src="./porshe23.jpg"
-                        alt="2020 Porsche Panamera"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2020 Porsche Panamera</h3>
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$85,581</p>
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
-                        </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
-                                    </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2020 Porsche Panamera</p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src='https://www.privatecollectionmotors.com/imagetag/475/main/l/Used-2017-Rolls-Royce-Dawn-1687633714.jpg'
-                        alt="2017 Rolls-Royce
-                            Dawn"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2017 Rolls-Royce
-                            Dawn</h3>
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$219,295</p>
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
-                        </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
-                                    </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2017 Rolls-Royce
-                                            Dawn</p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src="https://www.privatecollectionmotors.com/imagetag/471/main/l/Used-2017-Aston-Martin-DB11-Launch-Edition-Launch-Edition-1686730975.jpg"
-                        alt="2017 Aston Martin
-                            DB11"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2017 Aston Martin
-                            DB11</h3>
-
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$129,795</p>
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
-                        </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
-                                    </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2017 Aston Martin
-                                            DB11</p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src="https://www.privatecollectionmotors.com/imagetag/435/main/l/Used-2018-Bentley-Bentayga-Onyx-Edition-Onyx-Edition-1684878499.jpg"
-                        alt="2018 Bentley
-                            Bentayga"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2018 Bentley
-                            Bentayga </h3>
-
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$118,295</p>
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
-                        </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
-                                    </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2018 Bentley
-                                            Bentayga </p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src="https://www.privatecollectionmotors.com/imagetag/461/main/l/Used-2010-Bentley-Continental-Supersports-Supersports-1686240687.jpg"
-                        alt="2010 Bentley
-                            Continental"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2010 Bentley
-                            Continental</h3>
-
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$94,995 </p>
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
-                        </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
-                                    </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2010 Bentley
-                                            Continental</p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src="https://www.privatecollectionmotors.com/imagetag/131/main/l/Used-2005-Maserati-GranSport-1654949322.jpg"
-                        alt="2005 Maserati
-                            GranSport"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2005 Maserati
-                            GranSport</h3>
-
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$35,995 </p>
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
-                        </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
-                                    </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2005 Maserati
-                                            GranSport</p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src="https://www.privatecollectionmotors.com/imagetag/413/main/l/Used-2017-Mercedes-Benz-G-63-AMG-Designo-G-class-AMG-G-63-1682951968.jpg"
-                        alt="2017 Mercedes G 63 AMG"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2017 Mercedes G 63 AMG</h3>
-
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$124,795 </p>
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
-                        </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
-                                    </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2017 Mercedes G 63 AMG</p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src="./mayb.jpg"
-                        alt="2005 Maybach
-                            62"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2005 Maybach
-                            62</h3>
-
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$169,395</p>
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
-                        </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
-                                    </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2005 Maybach
-                                            62</p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-
-                <div className="card">
-                    <img
-                        className="card-image"
-                        src="https://www.privatecollectionmotors.com/imagetag/164/main/l/Used-2008-Maybach-57-1657816680.jpg"
-                        alt="2008 Maybach
-                            57"
-                    />
-                    <div className="card-content">
-                        <h3 className="card-title">2008 Maybach
-                            57</h3>
-
-                        <p className='prico'>Price</p>
-                        <p className='amountt'>$129,995</p>
-                        <div className="card-buttons">
-                            <button className="card-button textme" onClick={handleCloseForm}><BiMessageRounded className="message-icon" />Text Us</button>
-                            {/* <button className="card-button detailss" >View details</button> */}
-                        </div>
-                        {showForm && (
-                            <div className="contact-form-overlay">
-                                <div className="contact-form-card" ref={formRef}>
-                                    <div className="contact-form-header">
-                                        <button className="close-button" onClick={handleCloseFormm}>
-                                            ✘
-                                        </button>
-                                        <h2 className='textmenow'>Text Us</h2>
-                                    </div>
-                                    <form onSubmit={handleFormSubmit}>
-                                        <p className='carca'>2008 Maybach
-                                            57</p>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="name">Name:</label>
-                                            <input type="text" id="name" name="name" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="phone">Mobile Phone:</label>
-                                            <input type="text" id="phone" name="phone" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="email">Email:</label>
-                                            <input type="email" id="email" name="email" required />
-                                        </div>
-                                        <div className="contact-form-section aaaak">
-                                            <label htmlFor="message">Comments:</label>
-                                            <textarea id="message" name="message" rows="4" required></textarea>
-                                        </div>
-                                        <div className="contact-form-section">
-                                            <div className="consent-container">
-                                                <input
-                                                    type="checkbox"
-                                                    id="consent"
-                                                    name="consent"
-                                                    checked={consentChecked}
-                                                    required
-                                                    onChange={handleConsentChange}
-                                                />
-                                                <label htmlFor="consent" className="consent-label">
-                                                    ACKNOWLEDGMENT AND CONSENT:
-                                                </label>
-                                            </div>
-                                            <div className="consent-text">
-                                                <p>
-                                                    I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                    understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                    automated messages. I can withdraw my consent by texting "STOP".
-                                                </p>
-                                            </div>
-                                            <center>
-                                                <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                    {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                </button>
-
-                                            </center>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
+                ))}
 
 
 

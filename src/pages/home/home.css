@@ -70,8 +70,9 @@ select {
 }
 
 .inventory-button:hover .browse-button {
-        background-image: linear-gradient(45deg, transparent 50%,#FF6F61 50%);
+        background-image: linear-gradient(45deg, transparent 50%, #FF6F61 50%);
 }
+
 .inventory-button:hover .browse-button {
         background-color: #FF6F61;
         color: white;
@@ -192,9 +193,12 @@ p {
 }
 
 .contact-icon {
-        margin-right: 9px;
+        margin-right: 5px;
         color: #562F4A;
 }
+ .contact-item .addresss  {
+         font-size: 14px;
+ }
 
 .contact-info h3 {
         font-size: 15px;
@@ -233,21 +237,25 @@ p {
                 max-width: 33%;
         }
 }
+
 @media (max-width: 1200px) {
         .contact-info {
                 max-width: 38%;
         }
 }
+
 @media (max-width: 993px) {
         .contact-info {
                 max-width: 45%;
         }
 }
+
 @media (max-width: 858px) {
         .contact-info {
                 max-width: 51%;
         }
 }
+
 @media (max-width: 760px) {
         .contact-info {
                 max-width: 57%;
@@ -297,14 +305,28 @@ p {
 
 @media (max-width: 550px) {
         .contact-info {
-                max-width: 80%;
+                max-width: 73.5%;
         }
+
+        .contact-info {
+                padding: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                font-size: 15px;
+        }
+
 }
+
 
 @media (max-width: 445px) {
         .contact-info {
                 max-width: 100%;
         }
+                 .contact-item .addresss {
+                         font-size: 13px;
+                 }
+
+        
 }
 
 
@@ -330,20 +352,28 @@ p {
         .button-title {
                 font-size: 2.2rem;
         }
+        
 
         .contact-button {
                 padding: 0.75rem 1.5rem;
 
                 font-size: 1.2rem;
         }
-        .content p{
+
+        .content p {
                 font-size: 1.3rem;
         }
-        .content h2{
+
+        .content h2 {
                 font-size: 1.9rem;
         }
-}@media (max-width: 375px) {
+       
+               
+}
+
+@media (max-width: 375px) {
         .contact-info {
                 max-width: 98%;
         }
+
 }

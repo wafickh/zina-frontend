@@ -228,7 +228,7 @@ function Home() {
           <div className="contact-item">
             <MdOutlineLocationOn className="contact-icon" />
             <h3>Address</h3>
-            <p>3700 Parkview LN Irvine,CA.92612</p>
+            <p className='addresss'>3700 Parkview LN Irvine,CA.92612</p>
           </div>
         </div>
       </div>

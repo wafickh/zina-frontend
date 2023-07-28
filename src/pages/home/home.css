@@ -164,22 +164,24 @@ p {
 
 .contact-info {
         background-color: #f9f9f9;
-        padding: 2rem;
+        padding: 1.8rem;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: left;
         font-family: 'Roboto, sans-serif';
-        font-size: 16px;
+        font-size: 19px;
         color: #562F4A;
         width: 100%;
-        max-width: 21%;
+        max-width: 26%;
         margin: 8%;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
 }
 
 .contact-info h2 {
         font-size: 24px;
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 19px;
         color: #562F4A;
 }
 
@@ -190,12 +192,12 @@ p {
 }
 
 .contact-icon {
-        margin-right: 10px;
+        margin-right: 9px;
         color: #562F4A;
 }
 
 .contact-info h3 {
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 700;
         margin: 0;
         color: #562F4A;
@@ -205,19 +207,19 @@ p {
         margin: 10px 5px;
         color: #666;
         font-weight: bolder;
-        font-size: 14px;
+        font-size: 15px;
 }
 
 @media (max-width: 1108px) {
         .contact-info {
-                max-width: 40%;
+                max-width: 35%;
         }
 }
 
 /* Mobile Responsive */
 @media (max-width: 1268px) {
         .contact-info {
-                max-width: 30%;
+                max-width: 39%;
         }
 
 }
@@ -228,29 +230,33 @@ p {
         }
 
         .contact-info {
-                max-width: 27%;
+                max-width: 33%;
         }
 }
-
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
         .contact-info {
-                max-width: 36%;
+                max-width: 38%;
+        }
+}
+@media (max-width: 993px) {
+        .contact-info {
+                max-width: 45%;
         }
 }
 @media (max-width: 858px) {
         .contact-info {
-                max-width: 39%;
+                max-width: 51%;
         }
 }
 @media (max-width: 760px) {
         .contact-info {
-                max-width: 49%;
+                max-width: 57%;
         }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 660px) {
         .contact-info {
-                max-width: 59%;
+                max-width: 68%;
         }
 }
 
@@ -289,17 +295,18 @@ p {
         }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 550px) {
         .contact-info {
-                max-width: 73%;
+                max-width: 80%;
         }
 }
 
-@media (max-width: 405px) {
+@media (max-width: 445px) {
         .contact-info {
-                max-width: 90%;
+                max-width: 100%;
         }
 }
+
 
 @media screen and (min-width: 1900px) {
         .contact-item h3 {
@@ -334,5 +341,9 @@ p {
         }
         .content h2{
                 font-size: 1.9rem;
+        }
+}@media (max-width: 375px) {
+        .contact-info {
+                max-width: 98%;
         }
 }

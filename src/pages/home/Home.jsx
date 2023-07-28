@@ -4,9 +4,10 @@ import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import { FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import { ToastProvider, useToasts } from 'react-toast-notifications';
-
 import { HiOutlineMail } from 'react-icons/hi';
-
+import { MdOutlineLocationOn } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+import { BsWhatsapp } from "react-icons/bs";
 const Email = {
   send: (a) => {
     return new Promise((resolve, reject) => {
@@ -211,14 +212,23 @@ function Home() {
         <div className="contact-info">
           <h2>Contact Information</h2>
           <div className="contact-item">
+            <CgProfile className="contact-icon" />
+            <h3>Bouda Khalife</h3>
+          </div>
+          <div className="contact-item">
             <HiOutlineMail className="contact-icon" />
             <h3>Email</h3>
             <p>bk@zinascars.com</p>
           </div>
           <div className="contact-item">
-            <FaPhone className="contact-icon" />
-            <h3>Phone Number</h3>
+            <BsWhatsapp className="contact-icon" />
+            <h3>WhatsApp</h3>
             <p>+1 (949) 317-6520</p>
+          </div>
+          <div className="contact-item">
+            <MdOutlineLocationOn className="contact-icon" />
+            <h3>Address</h3>
+            <p>3700 Parkview LN Irvine,CA.92612</p>
           </div>
         </div>
       </div>

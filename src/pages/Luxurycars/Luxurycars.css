@@ -308,12 +308,74 @@ select {
     margin-bottom: 5%;
 }
 
+/* Add this to your existing styles */
+.reset-buttons-container {
+    display: flex;
+    gap: 8px;
+    overflow: hidden    ;
+        
+    /* Adjust the value to control the gap between buttons */
+    margin-top:12px;
+    margin-left: 14rem;
+    flex-wrap: wrap;
+        justify-content: flex-start;
+    max-width: 90%;
+    /* Add some top margin to the button container if needed */
+}
+
 .reset-button {
-    font-size: small;
+    font-size: 0.9rem;
     background-color: #562F4A;
     color: white;
-    margin-left: 15%;
     border: #562F4A;
+    padding: 4px 8px;
+    
+        transition: background-color 0.1s ease;
+}
+.reset-button:hover{
+    background-color: #FF6F61;
+}
+@media (max-width: 1398px) {
+.reset-buttons-container {
+        /* Arrange buttons vertically */
+        gap: 9px;
+        margin-left: 15%;
+        /* Reduce the gap between buttons for smaller screens */
+    }
+
+}
+@media (max-width: 768px) {
+    .reset-buttons-container {
+        /* Arrange buttons vertically */
+        gap: 8px;
+        margin-left: 5%;
+        /* Reduce the gap between buttons for smaller screens */
+    }
+}
+@media (max-width: 500px) {
+    .reset-buttons-container {
+        /* Stack buttons vertically */
+        align-items: center;
+    }
+
+    .reset-button {
+        max-width: 100%;
+        /* Make buttons take up full width */
+    }
+}
+/* CSS for even smaller screens, e.g., mobiles */
+@media (max-width: 480px) {
+    .reset-button {
+        font-size:0.9rem;
+        gap: 9px;
+
+        /* Further reduce the font size for smaller screens */
+    }
+        .reset-buttons-container{
+            margin-left: 5%;
+            gap: 7px;
+      
+        }
 }
 
 .cards-container {

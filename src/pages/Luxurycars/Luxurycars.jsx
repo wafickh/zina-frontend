@@ -52,6 +52,7 @@ const Luxurycars = () => {
     const [cars, setCars] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const { addToast } = useToasts();
+    const [resetKeyword, setResetKeyword] = useState('');
 
     const [currentPage, setCurrentPage] = useState(1);
     const [totalCars, setTotalCars] = useState(0);
@@ -311,9 +312,11 @@ const Luxurycars = () => {
 
                     // Add the new keyword sort option
                     updatedSortOptions.push(option);
+                    setResetKeyword(keyword);
 
                     return updatedSortOptions;
                 });
+
                 setCurrentPage(1);
             } else {
                 setSortOptions((prevSortOptions) =>
@@ -333,6 +336,7 @@ const Luxurycars = () => {
         );
         setCurrentPage(1);
         setKeyword('');
+        setResetKeyword('');
     };
     const hasKeywordOption = sortOptions.some((option) => option.startsWith('keyword:'));
     const phoneNumber = '+1 (949) 317-6520';
@@ -360,6 +364,18 @@ const Luxurycars = () => {
         setClickedCardTitle(null);
         setShowForm(false);
         document.body.classList.remove('no-scroll');
+    };
+    
+    const handleResetFilter = (filterType) => {
+        setSortOptions((prevSortOptions) => prevSortOptions.filter((option) => !option.startsWith(filterType)));
+        setCurrentPage(1);
+
+        // Reset the corresponding state variable
+        if (filterType === 'Year') {
+            setyear('');
+        } else if (filterType === 'Name') {
+            setName('');
+        }
     };
     const CardData = [
 
@@ -460,7 +476,7 @@ const Luxurycars = () => {
         <div>
             <Navbar />
             <center className='pagename'><h3>Used Cars Inventory</h3></center>
-             <div className="button-containerr button-container">
+            <div className="button-containerr button-container">
                 <button className="filter-button" onClick={handleToggleDropdown}>
                     <FaFilter className="filter-icon" />
                     Filter Vehicles
@@ -476,7 +492,7 @@ const Luxurycars = () => {
 
                             </select>
                         </div> */}
-                     
+
                         <div className="dropdown-item">
                             <label htmlFor="Name" id='woww'>Make</label>
                             <select id="Name" value={name} onChange={handleDropdownChange}>
@@ -490,7 +506,7 @@ const Luxurycars = () => {
                                 <option value="Jaguar">Jaguar</option>
 
                             </select>
-                        </div>   
+                        </div>
                         <div className="dropdown-item">
                             <label htmlFor="Year" id='woww'>Year</label>
                             <select value={year} id="Year" onChange={handleDropdownChange}>
@@ -515,14 +531,37 @@ const Luxurycars = () => {
                         </div> */}
                         <div className="dropdown-item">
                             <label htmlFor="keyword" id='woww'>Vehicle Search</label>
-                            <input type="text" id="keyword" onChange={handleKeywordChange} value={keyword} onKeyPress={handleInputChange} />
+                            <input type="text" id="keyword" onChange={handleKeywordChange} value={keyword} onKeyPress={handleInputChange} maxLength={55} />
                         </div>
                     </div>
                 )}
             </div>
-            <button className="reset-button" onClick={handleResetFilters} style={{ display: sortOptions.length > 0 && hasKeywordOption ? 'block' : 'none', position: 'absolute' }}>
-                Remove Search Filterations ✗
-            </button> 
+
+            <div className="reset-buttons-container">
+                {/* Reset Keyword */}
+
+                {name.length > 0 && (
+                    <button className="reset-button" onClick={() => handleResetFilter('Name')}>
+                        {name} ✗
+                    </button>
+                )}
+                {/* Reset Year */}
+                {year.length > 0 && (
+                    <button className="reset-button" onClick={() => handleResetFilter('Year')}>
+                        {year} ✗
+                    </button>
+                )}
+
+                {/* Reset Make */}
+
+                {resetKeyword.length > 0 && (
+                    <button className="reset-button" onClick={handleResetFilters} style={{ display: sortOptions.length > 0 && hasKeywordOption ? 'block' : 'none' }}>
+                        {resetKeyword} ✗
+                    </button>
+                )}
+            </div>
+
+
             {/* {isLoading ? (
                 <div className="loading-screen">
                     <BeatLoader color="#ffffff" loading={isLoading} size={15} />
@@ -552,17 +591,17 @@ const Luxurycars = () => {
                     </button>
                 </div>
                 <div className="right-container">
-                                    <label htmlFor="sortby" id="woww">Sort By:</label>
-                                    <div>
-                                        <select value={sort} id="sortby" onChange={handleDropdownChange}>
-                                            <option value="">--</option>
-                                            <option value="VehicleAtoZ">Vehicles: A to Z</option>
-                                            <option value="VehicleZtoA">Vehicles: Z to A</option>
-                                            <option value="PriceLowtoHigh">Price: Low to High</option>
-                                            <option value="PriceHightoLow">Price: High to Low</option>
-                                        </select>
-                                    </div>
-                                </div>
+                    <label htmlFor="sortby" id="woww">Sort By:</label>
+                    <div>
+                        <select value={sort} id="sortby" onChange={handleDropdownChange}>
+                            <option value="">--</option>
+                            <option value="VehicleAtoZ">Vehicles: A to Z</option>
+                            <option value="VehicleZtoA">Vehicles: Z to A</option>
+                            <option value="PriceLowtoHigh">Price: Low to High</option>
+                            <option value="PriceHightoLow">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
             </div>
             <div className="cards-container">
                 {CardData.map((card, index) => (

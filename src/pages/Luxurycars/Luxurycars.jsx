@@ -426,8 +426,31 @@ const Luxurycars = () => {
             title: '2017 Mercedes G 63 AMG',
             imageSrc:
                 'https://www.privatecollectionmotors.com/imagetag/413/main/l/Used-2017-Mercedes-Benz-G-63-AMG-Designo-G-class-AMG-G-63-1682951968.jpg',
-            price: '$124,795',
+            price: '$124,755',
         },
+        {
+            title: '2012 Porsche 911 Carrera S Cabriolet',
+            imageSrc: 'https://www.privatecollectionmotors.com/imagetag/507/main/l/Used-2012-Porsche-911-Carrera-S-Cabriolet-991-Carrera-S-135715-MSRP-1690406023.jpg',
+
+            price: '$129,785',
+        },
+        {
+            title: '2001 Rolls-Royce Corniche',
+            imageSrc: 'https://www.privatecollectionmotors.com/imagetag/464/main/l/Used-2001-Rolls-Royce-Corniche-Convertible-1686939564.jpg',
+
+            price: '$140,235',
+        },
+        {
+            title: '2009 Jaguar XK Series XKR',
+            imageSrc: 'https://www.privatecollectionmotors.com/imagetag/439/main/l/Used-2009-Jaguar-XK-Series-XKR-XKR-1684877728.jpg',
+
+            price: '$43,375 ',
+        },
+
+
+
+
+
 
     ];
 
@@ -437,55 +460,50 @@ const Luxurycars = () => {
         <div>
             <Navbar />
             <center className='pagename'><h3>Used Cars Inventory</h3></center>
-            {/* <div className="button-containerr button-container">
+             <div className="button-containerr button-container">
                 <button className="filter-button" onClick={handleToggleDropdown}>
                     <FaFilter className="filter-icon" />
                     Filter Vehicles
                 </button>
 
                 {isDropdownOpen && (
-                    <div className="dropdown-menu">
-                        <div className="dropdown-item">
+                    <div className="dropdown-menu specific-dropdown-menu">
+                        {/* <div className="dropdown-item">
                             <label htmlFor="Condition" id='woww'>Condition</label>
                             <select value={Condition} id="Condition" onChange={handleDropdownChange}>
                                 <option value="">Any</option>
                                 <option value="Used">Used</option>
 
                             </select>
-                        </div>
-                        <div className="dropdown-item">
-                            <label htmlFor="Year" id='woww'>Year</label>
-                            <select value={year} id="Year" onChange={handleDropdownChange}>
-                                <option value="">Any</option>
-                                <option value="2009">2009</option>
-                                <option value="2010">2010</option>
-                                <option value="2011">2011</option>
-                                <option value="2012">2012</option>
-                                <option value="2013">2013</option>
-                                <option value="2014">2014</option>
-                                <option value="2015">2015</option>
-                                <option value="2016">2016</option>
-                                <option value="2017">2017</option>
-                                <option value="2018">2018</option>
-                                <option value="2019">2019</option>
-                                <option value="2020">2020</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-
-                            </select>
-                        </div>
+                        </div> */}
+                     
                         <div className="dropdown-item">
                             <label htmlFor="Name" id='woww'>Make</label>
                             <select id="Name" value={name} onChange={handleDropdownChange}>
                                 <option value="">Any</option>
                                 <option value="Aston Martin">Aston Martin</option>
-                                <option value="Lambo">Lambo</option>
-                                <option value="Ferrari">Ferrari</option>
-                                <option value="BMW">BMW</option>
                                 <option value="Mercedes">Mercedes</option>
+                                <option value="Porsche">Porsche</option>
+                                <option value="Rolls-Royce">Rolls-Royce</option>
+                                <option value="Maybach">Maybach</option>
+                                <option value="Bentley">Bentley</option>
+                                <option value="Jaguar">Jaguar</option>
+
                             </select>
-                        </div>
+                        </div>   
                         <div className="dropdown-item">
+                            <label htmlFor="Year" id='woww'>Year</label>
+                            <select value={year} id="Year" onChange={handleDropdownChange}>
+                                <option value="">Any</option>
+                                {Array.from({ length: 2023 - 1970 + 1 }, (_, index) => (
+                                    <option key={2023 - index} value={2023 - index}>
+                                        {2023 - index}
+                                    </option>
+                                ))}
+                            </select>
+
+                        </div>
+                        {/* <div className="dropdown-item">
                             <label htmlFor="Cylinders" id='woww'>Cylinders</label>
                             <select value={cylinder} id="Cylinders" onChange={handleDropdownChange}>
                                 <option value="">Any</option>
@@ -494,7 +512,7 @@ const Luxurycars = () => {
                                 <option value="12">12</option>
 
                             </select>
-                        </div>
+                        </div> */}
                         <div className="dropdown-item">
                             <label htmlFor="keyword" id='woww'>Vehicle Search</label>
                             <input type="text" id="keyword" onChange={handleKeywordChange} value={keyword} onKeyPress={handleInputChange} />
@@ -504,7 +522,7 @@ const Luxurycars = () => {
             </div>
             <button className="reset-button" onClick={handleResetFilters} style={{ display: sortOptions.length > 0 && hasKeywordOption ? 'block' : 'none', position: 'absolute' }}>
                 Remove Search Filterations ✗
-            </button> */}
+            </button> 
             {/* {isLoading ? (
                 <div className="loading-screen">
                     <BeatLoader color="#ffffff" loading={isLoading} size={15} />
@@ -525,7 +543,7 @@ const Luxurycars = () => {
                         <FaChevronLeft />
                     </button>
                     {/* {totalCars} */}
-                    <span id='sas'>Browse 12 Vehicles</span>
+                    <span id='sas'>Browse 15 Vehicles</span>
                     <button
                         disabled={currentPage * pageSize >= totalCars}
                         onClick={() => handlePageChange(currentPage + 1)}
@@ -533,7 +551,7 @@ const Luxurycars = () => {
                         <FaChevronRight />
                     </button>
                 </div>
-                {/* <div className="right-container">
+                <div className="right-container">
                                     <label htmlFor="sortby" id="woww">Sort By:</label>
                                     <div>
                                         <select value={sort} id="sortby" onChange={handleDropdownChange}>
@@ -544,7 +562,7 @@ const Luxurycars = () => {
                                             <option value="PriceHightoLow">Price: High to Low</option>
                                         </select>
                                     </div>
-                                </div> */}
+                                </div>
             </div>
             <div className="cards-container">
                 {CardData.map((card, index) => (
@@ -642,7 +660,7 @@ const Luxurycars = () => {
                         <FaChevronLeft />
                     </button>
                     {/* {totalCars} */}
-                    <span id='sas'>Browse 12 Vehicles</span>
+                    <span id='sas'>Browse 15 Vehicles</span>
                     <button
                         disabled={currentPage * pageSize >= totalCars}
                         onClick={() => handlePageChange(currentPage + 1)}

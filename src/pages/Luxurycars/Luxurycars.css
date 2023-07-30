@@ -100,7 +100,7 @@
 }
 
 .filter-button:hover {
-    background-color: #fd9137;
+    background-color: #FF6F61;
 }
 
 .filter-button i {
@@ -176,7 +176,7 @@
 .filter-button {
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
 }
 
@@ -235,7 +235,7 @@ select {
 }
 
 .dropdown-item {
-    flex-basis: calc(25% - 10px);
+    flex-basis: calc(30% - 10px);
     margin-bottom: 10px;
 }
 
@@ -448,6 +448,7 @@ select {
     font-weight: 600;
 }
 
+
 .textmenow {
     font-size: 1.5rem;
 }
@@ -529,7 +530,7 @@ option {
     }
 
     .card-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .card-button {
@@ -581,6 +582,7 @@ option {
     }
 }
 
+
 @media (max-width: 400px) {
     .card {
         width: 94%;
@@ -593,14 +595,42 @@ option {
     .card-image {
         width: 56%;
     }
-}
+} 
+/* Add the new media query for 729px with a more specific class selector */
 
-@media (min-width: 768px) and (max-width: 980px) {
+@media (min-width: 729px) {
+    .specific-dropdown-menu {
+        margin-top: -7.5% !important;}
+        
+}
+@media (min-width: 981px) and (max-width: 1160px) {
     .dropdown-menu {
-        margin-top: -12.4%;
+        margin-top: -10.4% !important;
+    }
+}
+@media (min-width: 738px) and (max-width: 779px) {
+    .dropdown-menu {
+        margin-top: -7.4% !important ;
+    }
+}
+@media (min-width: 769px) and (max-width: 981px) {
+    .dropdown-menu {
+        margin-top: -12.4% !important;
     }
 }
 
+@media (min-width: 738px) and (max-width: 769px) {
+    .dropdown-menu {
+        margin-top: -13.4% ;
+    }
+}
+
+
+@media (max-width: 1167px) {
+    .dropdown-item {
+        flex-basis: 50%;
+    }
+}
 
 @media (max-width: 767px) {
     .dropdown-item {
@@ -716,3 +746,4 @@ option {
         /* Full width with a 20px gap between cards on small screens */
     }
 }
+

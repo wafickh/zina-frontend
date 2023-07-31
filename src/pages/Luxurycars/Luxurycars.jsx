@@ -208,15 +208,17 @@ const Luxurycars = () => {
                     setSortOptions((prevSortOptions) => {
                         const updatedSortOptions = [...prevSortOptions];
                         const existingOptionIndex = updatedSortOptions.findIndex((option) => option.startsWith(id));
-                        setName(`${value}`)
+                        setName(`${value}`);
                         if (existingOptionIndex !== -1) {
                             updatedSortOptions.splice(existingOptionIndex, 1, `${id}:${value}`);
                         } else {
                             updatedSortOptions.push(`${id}:${value}`);
                         }
+                        handleResetFilters();
 
                         return updatedSortOptions;
                     });
+
                 }
             }
             else if (id === 'Cylinders') {
@@ -308,11 +310,13 @@ const Luxurycars = () => {
             if (value.trim() !== '') {
                 setSortOptions((prevSortOptions) => {
                     // Remove previous keyword sort option, if exists
-                    const updatedSortOptions = prevSortOptions.filter((option) => !option.startsWith('keyword:'));
-
+                    const updatedSortOptions = prevSortOptions.filter(
+                        (option) => !option.startsWith('Name') && !option.startsWith('keyword')
+                    );
                     // Add the new keyword sort option
                     updatedSortOptions.push(option);
                     setResetKeyword(keyword);
+                    setName('');
 
                     return updatedSortOptions;
                 });
@@ -323,6 +327,7 @@ const Luxurycars = () => {
                     prevSortOptions.filter((option) => !option.startsWith(id))
                 );
                 setCurrentPage(1);
+
             }
         }
     };
@@ -365,7 +370,7 @@ const Luxurycars = () => {
         setShowForm(false);
         document.body.classList.remove('no-scroll');
     };
-    
+
     const handleResetFilter = (filterType) => {
         setSortOptions((prevSortOptions) => prevSortOptions.filter((option) => !option.startsWith(filterType)));
         setCurrentPage(1);
@@ -560,6 +565,9 @@ const Luxurycars = () => {
                     </button>
                 )}
             </div>
+            <div className="results-not-found">
+                No Results Found, Please Try Another Search
+            </div>
 
 
             {/* {isLoading ? (
@@ -707,32 +715,19 @@ const Luxurycars = () => {
                         <FaChevronRight />
                     </button>
                 </div>
-                {/* <div className="right-container">
-                                    <label htmlFor="sortby" id="woww">Sort By:</label>
-                                    <div>
-                                        <select value={sort} id="sortby" onChange={handleDropdownChange}>
-                                            <option value="">--</option>
-                                            <option value="VehicleAtoZ">Vehicles: A to Z</option>
-                                            <option value="VehicleZtoA">Vehicles: Z to A</option>
-                                            <option value="PriceLowtoHigh">Price: Low to High</option>
-                                            <option value="PriceHightoLow">Price: High to Low</option>
-                                        </select>
-                                    </div>
-                                </div> */}
+
             </div>
 
 
 
 
 
-
+            
 
             {/* </>
                     ) : (
                         <>
-                            <div className="results-not-found">
-                                No Results Found, Please Try Another Search
-                            </div>
+                            
 
                         </>
 {/* 

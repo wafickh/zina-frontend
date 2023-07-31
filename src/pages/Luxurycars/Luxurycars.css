@@ -22,19 +22,82 @@
 .results-not-found {
     width: 19.5%;
     padding: 0.9rem;
-
     font-size: small;
     font-weight: 600;
     background-color: rgb(224, 183, 183);
     color: rgb(228, 27, 27);
-    margin-left: 25%;
-    margin-top: 9%;
-
-    transform: translate(-50%, -50%);
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 4%;
 }
 
-/* Add any additional styles as needed */
+@media (min-width: 600px) {
+    .results-not-found {
+        max-width: 40.5%;
+        padding: 0.9rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        background-color: rgb(224, 183, 183);
+        color: rgb(228, 27, 27);
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 4%;
+    }
+}
 
+@media (min-width: 890px) {
+    .results-not-found {
+        max-width: 40.5%;
+        padding: 0.9rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        background-color: rgb(224, 183, 183);
+        color: rgb(228, 27, 27);
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 4%;
+    }
+}
+
+@media (min-width: 1160px) {
+    .results-not-found {
+        max-width: 40.5%;
+        padding: 0.9rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        background-color: rgb(224, 183, 183);
+        color: rgb(228, 27, 27);
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 4%;
+    }
+}
+.results-not-found {
+    width: auto;
+    display: inline-block;
+    padding: 0.9rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: rgb(224, 183, 183);
+    color: rgb(228, 27, 27);
+    white-space: nowrap;
+    border: 2px solid rgb(228, 27, 27);
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 4%;
+}
+
+@media (max-width: 890px) {
+    .results-not-found {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 690px) {
+    .results-not-found {
+        font-size: 0.7rem;
+    }
+}
 .filter-button {
     display: flex;
     align-items: center;
@@ -312,13 +375,13 @@ select {
 .reset-buttons-container {
     display: flex;
     gap: 8px;
-    overflow: hidden    ;
-        
+    overflow: hidden;
+
     /* Adjust the value to control the gap between buttons */
-    margin-top:12px;
+    margin-top: 12px;
     margin-left: 14rem;
     flex-wrap: wrap;
-        justify-content: flex-start;
+    justify-content: flex-start;
     max-width: 90%;
     /* Add some top margin to the button container if needed */
 }
@@ -329,14 +392,24 @@ select {
     color: white;
     border: #562F4A;
     padding: 4px 8px;
-    
-        transition: background-color 0.1s ease;
+
+    transition: background-color 0.1s ease;
 }
-.reset-button:hover{
+
+.reset-button:hover {
     background-color: #FF6F61;
 }
-@media (max-width: 1398px) {
+@media (max-width: 1968px) {
 .reset-buttons-container {
+        /* Arrange buttons vertically */
+        gap: 9px;
+        margin-left: 15%;
+        /* Reduce the gap between buttons for smaller screens */
+    }
+}
+
+@media (max-width: 1398px) {
+    .reset-buttons-container {
         /* Arrange buttons vertically */
         gap: 9px;
         margin-left: 15%;
@@ -344,6 +417,7 @@ select {
     }
 
 }
+
 @media (max-width: 768px) {
     .reset-buttons-container {
         /* Arrange buttons vertically */
@@ -352,6 +426,7 @@ select {
         /* Reduce the gap between buttons for smaller screens */
     }
 }
+
 @media (max-width: 500px) {
     .reset-buttons-container {
         /* Stack buttons vertically */
@@ -363,19 +438,21 @@ select {
         /* Make buttons take up full width */
     }
 }
+
 /* CSS for even smaller screens, e.g., mobiles */
 @media (max-width: 480px) {
     .reset-button {
-        font-size:0.9rem;
+        font-size: 0.9rem;
         gap: 9px;
 
         /* Further reduce the font size for smaller screens */
     }
-        .reset-buttons-container{
-            margin-left: 5%;
-            gap: 7px;
-      
-        }
+
+    .reset-buttons-container {
+        margin-left: 5%;
+        gap: 7px;
+
+    }
 }
 
 .cards-container {
@@ -403,7 +480,6 @@ select {
 .card-content {
     overflow: hidden;
     padding: 22px 2px
-
 }
 
 .card-title {
@@ -421,23 +497,25 @@ select {
     text-overflow: ellipsis;
     font-weight: 500;
 }
-.prico{
-        position: absolute;
-        top: 105px;
-        right: 16px;
-        font-size: 1.1rem;
-        width: 40%;
-        padding-left: 2.5%;
-        color: rgba(204, 204, 204, 0.812);
-        white-space: normal;
-        /* Update this line */
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-weight: 400;
+
+.prico {
+    position: absolute;
+    top: 105px;
+    right: 16px;
+    font-size: 1.1rem;
+    width: 40%;
+    padding-left: 2.5%;
+    color: rgba(204, 204, 204, 0.812);
+    white-space: normal;
+    /* Update this line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
 }
-.amountt{
-        margin-bottom: 80px;
-position: absolute;
+
+.amountt {
+    margin-bottom: 80px;
+    position: absolute;
     top: 122px;
     right: 16px;
     font-size: 1.33rem;
@@ -451,6 +529,7 @@ position: absolute;
     font-weight: 600;
 
 }
+
 .card-buttons {
     display: flex;
     justify-content: space-evenly;
@@ -466,7 +545,7 @@ position: absolute;
 
     background-color: #562F4A;
     color: #fff;
-    
+
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -657,24 +736,29 @@ option {
     .card-image {
         width: 56%;
     }
-} 
+}
+
 /* Add the new media query for 729px with a more specific class selector */
 
 @media (min-width: 729px) {
     .specific-dropdown-menu {
-        margin-top: -7.5% !important;}
-        
+        margin-top: -7.5% !important;
+    }
+
 }
+
 @media (min-width: 981px) and (max-width: 1160px) {
     .dropdown-menu {
         margin-top: -10.4% !important;
     }
 }
+
 @media (min-width: 738px) and (max-width: 779px) {
     .dropdown-menu {
-        margin-top: -7.4% !important ;
+        margin-top: -7.4% !important;
     }
 }
+
 @media (min-width: 769px) and (max-width: 981px) {
     .dropdown-menu {
         margin-top: -12.4% !important;
@@ -683,7 +767,7 @@ option {
 
 @media (min-width: 738px) and (max-width: 769px) {
     .dropdown-menu {
-        margin-top: -13.4% ;
+        margin-top: -13.4%;
     }
 }
 
@@ -808,4 +892,3 @@ option {
         /* Full width with a 20px gap between cards on small screens */
     }
 }
-

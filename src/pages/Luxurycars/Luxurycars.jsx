@@ -166,7 +166,6 @@ const Luxurycars = () => {
             setIsLoading(false);
         }
     };
-    console.log(cars)
     const [Condition, setCondition] = useState('');
     const [keyword, setKeyword] = useState('');
 
@@ -389,6 +388,8 @@ const Luxurycars = () => {
             imageSrc: 'https://res.cloudinary.com/do0puhubq/image/upload/v1690303528/porshe12_ndjebd.jpg',
             price: '$91,681',
         },
+        //  ,"Name":"Porsche","Price":"85,581","Year":"2020","Model":"Panamera","images":[{"url":"https://res.cloudinary.com/do0puhubq/image/upload/v1690303461/porshe23_r2cocg.jpg"}]
+
         {
             title: '2020 Porsche Panamera',
             imageSrc: 'https://res.cloudinary.com/do0puhubq/image/upload/v1690303461/porshe23_r2cocg.jpg',
@@ -474,6 +475,8 @@ const Luxurycars = () => {
 
 
     ];
+    console.log(cars)
+
 
 
 
@@ -524,16 +527,7 @@ const Luxurycars = () => {
                             </select>
 
                         </div>
-                        {/* <div className="dropdown-item">
-                            <label htmlFor="Cylinders" id='woww'>Cylinders</label>
-                            <select value={cylinder} id="Cylinders" onChange={handleDropdownChange}>
-                                <option value="">Any</option>
-                                <option value="6">6</option>
-                                <option value="8">8</option>
-                                <option value="12">12</option>
 
-                            </select>
-                        </div> */}
                         <div className="dropdown-item">
                             <label htmlFor="keyword" id='woww'>Vehicle Search</label>
                             <input type="text" id="keyword" onChange={handleKeywordChange} value={keyword} onKeyPress={handleInputChange} maxLength={55} />
@@ -565,130 +559,125 @@ const Luxurycars = () => {
                     </button>
                 )}
             </div>
-            <div className="results-not-found">
-                No Results Found, Please Try Another Search
-            </div>
 
 
-            {/* {isLoading ? (
+            {isLoading ? (
                 <div className="loading-screen">
                     <BeatLoader color="#ffffff" loading={isLoading} size={15} />
-
                 </div>
             ) : (
                 <>
-
                     {cars.length > 0 ? (
-                        <> */}
+                        <>
 
-            <div className="responsive-container">
-                <div className="left-container">
-                    <button
-                        disabled={currentPage === 1}
-                        onClick={() => handlePageChange(currentPage - 1)}
-                    >
-                        <FaChevronLeft />
-                    </button>
-                    {/* {totalCars} */}
-                    <span id='sas'>Browse 15 Vehicles</span>
-                    <button
-                        disabled={currentPage * pageSize >= totalCars}
-                        onClick={() => handlePageChange(currentPage + 1)}
-                    >
-                        <FaChevronRight />
-                    </button>
-                </div>
-                <div className="right-container">
-                    <label htmlFor="sortby" id="woww">Sort By:</label>
-                    <div>
-                        <select value={sort} id="sortby" onChange={handleDropdownChange}>
-                            <option value="">--</option>
-                            <option value="VehicleAtoZ">Vehicles: A to Z</option>
-                            <option value="VehicleZtoA">Vehicles: Z to A</option>
-                            <option value="PriceLowtoHigh">Price: Low to High</option>
-                            <option value="PriceHightoLow">Price: High to Low</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div className="cards-container">
-                {CardData.map((card, index) => (
-                    <div className="card" key={index}>
-                        <img
-                            className="card-image"
-                            src={card.imageSrc}
-                            alt={card.title}
-                        />
-                        <div className="card-content">
-                            <h3 className="card-title">{card.title}</h3>
-                            <p className='prico'>Price</p>
-                            <p className='amountt'>{card.price}</p>
-                            <div className="card-buttons">
-                                <button className="card-button textme" onClick={() => handleCloseForm(card.title)}><BiMessageRounded className="message-icon" />Text Us</button>
-                                {/* <button className="card-button detailss" >View details</button> */}
-                            </div>
-                            {showForm && clickedCardTitle === card.title && (
-                                <div className="contact-form-overlay">
-                                    <div className="contact-form-card" ref={formRef}>
-                                        <div className="contact-form-header">
-                                            <button className="close-button" onClick={handleCloseFormm}>
-                                                ✘
-                                            </button>
-                                            <h2 className='textmenow'>Text Us</h2>
-                                        </div>
-                                        <form onSubmit={handleFormSubmit}>
-                                            <p className='carca'>{card.title}</p>
-                                            <div className="contact-form-section aaaak">
-                                                <label htmlFor="name">Name:</label>
-                                                <input type="text" id="name" name="name" required />
-                                            </div>
-                                            <div className="contact-form-section aaaak">
-                                                <label htmlFor="phone">Mobile Phone:</label>
-                                                <input type="text" id="phone" name="phone" required />
-                                            </div>
-                                            <div className="contact-form-section aaaak">
-                                                <label htmlFor="email">Email:</label>
-                                                <input type="email" id="email" name="email" required />
-                                            </div>
-                                            <div className="contact-form-section aaaak">
-                                                <label htmlFor="message">Comments:</label>
-                                                <textarea id="message" name="message" rows="4" required></textarea>
-                                            </div>
-                                            <div className="contact-form-section">
-                                                <div className="consent-container">
-                                                    <input
-                                                        type="checkbox"
-                                                        id="consent"
-                                                        name="consent"
-                                                        checked={consentChecked}
-                                                        required
-                                                        onChange={handleConsentChange}
-                                                    />
-                                                    <label htmlFor="consent" className="consent-label">
-                                                        ACKNOWLEDGMENT AND CONSENT:
-                                                    </label>
-                                                </div>
-                                                <div className="consent-text">
-                                                    <p>
-                                                        I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
-                                                        understand that message and data rates may apply. This is my written consent to receive texts and calls, including
-                                                        automated messages. I can withdraw my consent by texting "STOP".
-                                                    </p>
-                                                </div>
-                                                <center>
-                                                    <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
-                                                        {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
-                                                    </button>
 
-                                                </center>
-                                            </div>
-                                        </form>
+                            <div className="responsive-container">
+                                <div className="left-container">
+                                    <button
+                                        disabled={currentPage === 1}
+                                        onClick={() => handlePageChange(currentPage - 1)}
+                                    >
+                                        <FaChevronLeft />
+                                    </button>
+                                        <span id='sas'>Browse {totalCars} Vehicles</span>
+                                    <button
+                                        disabled={currentPage * pageSize >= totalCars}
+                                        onClick={() => handlePageChange(currentPage + 1)}
+                                    >
+                                        <FaChevronRight />
+                                    </button>
+                                </div>
+                                <div className="right-container">
+                                    <label htmlFor="sortby" id="woww">Sort By:</label>
+                                    <div>
+                                        <select value={sort} id="sortby" onChange={handleDropdownChange}>
+                                            <option value="">--</option>
+                                            <option value="VehicleAtoZ">Vehicles: A to Z</option>
+                                            <option value="VehicleZtoA">Vehicles: Z to A</option>
+                                            <option value="PriceLowtoHigh">Price: Low to High</option>
+                                            <option value="PriceHightoLow">Price: High to Low</option>
+                                        </select>
                                     </div>
                                 </div>
-                            )}
-                        </div>
-                    </div>
-                ))}
+                            </div>
+                            <div className="cards-container">
+                                {cars.map((car, index) => (
+                                    <div className="card" key={index}>
+                                        <img
+                                            className="card-image"
+                                            src={car.images[0].url}
+                                            alt={car.Name}
+                                        />
+                                        <div className="card-content">
+                                            <h3 className="card-title">{car.Year} {car.Name} {car.Model}</h3>
+                                            <p className='prico'>Price</p>
+                                            <p className='amountt'>${car.Price}</p>
+                                            <div className="card-buttons">
+                                                <button className="card-button textme" onClick={() => handleCloseForm(car.Name)}><BiMessageRounded className="message-icon" />Text Us</button>
+                                                {/* <button className="card-button detailss" >View details</button> */}
+                                            </div>
+                                            {showForm && clickedCardTitle === car.Name && (
+                                                <div className="contact-form-overlay">
+                                                    <div className="contact-form-card" ref={formRef}>
+                                                        <div className="contact-form-header">
+                                                            <button className="close-button" onClick={handleCloseFormm}>
+                                                                ✘
+                                                            </button>
+                                                            <h2 className='textmenow'>Text Us</h2>
+                                                        </div>
+                                                        <form onSubmit={handleFormSubmit}>
+                                                            <p className='carca'>{car.Year} {car.Name} {car.Model}</p>
+                                                            <div className="contact-form-section aaaak">
+                                                                <label htmlFor="name">Name:</label>
+                                                                <input type="text" id="name" name="name" required />
+                                                            </div>
+                                                            <div className="contact-form-section aaaak">
+                                                                <label htmlFor="phone">Mobile Phone:</label>
+                                                                <input type="text" id="phone" name="phone" required />
+                                                            </div>
+                                                            <div className="contact-form-section aaaak">
+                                                                <label htmlFor="email">Email:</label>
+                                                                <input type="email" id="email" name="email" required />
+                                                            </div>
+                                                            <div className="contact-form-section aaaak">
+                                                                <label htmlFor="message">Comments:</label>
+                                                                <textarea id="message" name="message" rows="4" required></textarea>
+                                                            </div>
+                                                            <div className="contact-form-section">
+                                                                <div className="consent-container">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        id="consent"
+                                                                        name="consent"
+                                                                        checked={consentChecked}
+                                                                        required
+                                                                        onChange={handleConsentChange}
+                                                                    />
+                                                                    <label htmlFor="consent" className="consent-label">
+                                                                        ACKNOWLEDGMENT AND CONSENT:
+                                                                    </label>
+                                                                </div>
+                                                                <div className="consent-text">
+                                                                    <p>
+                                                                        I consent to receive text messages or calls from the dealer or their employees at the provided mobile number. I
+                                                                        understand that message and data rates may apply. This is my written consent to receive texts and calls, including
+                                                                        automated messages. I can withdraw my consent by texting "STOP".
+                                                                    </p>
+                                                                </div>
+                                                                <center>
+                                                                    <button type="submit" className={isSubmitting ? 'subbut loading' : 'subbut'} disabled={isSubmitting}>
+                                                                        {isSubmitting ? <span className="loading-spinner"></span> : 'I AGREE, SEND'}
+                                                                    </button>
+
+                                                                </center>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        ))}
 
 
 
@@ -696,33 +685,45 @@ const Luxurycars = () => {
 
 
 
-            </div>
+                                    </div>
 
-            <div className="responsive-container">
-                <div className="left-container">
-                    <button
-                        disabled={currentPage === 1}
-                        onClick={() => handlePageChange(currentPage - 1)}
-                    >
-                        <FaChevronLeft />
-                    </button>
-                    {/* {totalCars} */}
-                    <span id='sas'>Browse 15 Vehicles</span>
-                    <button
-                        disabled={currentPage * pageSize >= totalCars}
-                        onClick={() => handlePageChange(currentPage + 1)}
-                    >
-                        <FaChevronRight />
-                    </button>
-                </div>
+                            <div className="responsive-container">
+                                <div className="left-container">
+                                    <button
+                                        disabled={currentPage === 1}
+                                        onClick={() => handlePageChange(currentPage - 1)}
+                                    >
+                                        <FaChevronLeft />
+                                    </button>
+                                    {/* {totalCars} */}
+                                        <span id='sas'>Browse {totalCars} Vehicles</span>
+                                    <button
+                                        disabled={currentPage * pageSize >= totalCars}
+                                        onClick={() => handlePageChange(currentPage + 1)}
+                                    >
+                                        <FaChevronRight />
+                                    </button>
+                                </div>
 
-            </div>
+                            </div>
+                        </>
+                    ) : (
+                        <>
+                            <div className="results-not-found">
+                                No Results Found, Please Try Another Search
+                            </div>
+                        </>
+                    )}
+                </>
+            )}
 
 
 
 
 
-            
+
+
+
 
             {/* </>
                     ) : (

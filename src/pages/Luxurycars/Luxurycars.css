@@ -96,6 +96,14 @@
 @media (max-width: 690px) {
     .results-not-found {
         font-size: 0.7rem;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+}
+@media (max-width: 1500px) {
+    .results-not-found {
+        margin-top: 15%;
+        margin-bottom: 25%;
     }
 }
 .filter-button {

@@ -388,7 +388,7 @@ const Luxurycars = () => {
             imageSrc: 'https://res.cloudinary.com/do0puhubq/image/upload/v1690303528/porshe12_ndjebd.jpg',
             price: '$91,681',
         },
-        //  ,"Name":"Porsche","Price":"85,581","Year":"2020","Model":"Panamera","images":[{"url":"https://res.cloudinary.com/do0puhubq/image/upload/v1690303461/porshe23_r2cocg.jpg"}]
+//        ,"Name":"Porsche","Price":"85,581","Year":"2020","Model":"Panamera","images":[{"url":"https://res.cloudinary.com/do0puhubq/image/upload/v1690303461/porshe23_r2cocg.jpg"}]
 
         {
             title: '2020 Porsche Panamera',
@@ -474,9 +474,11 @@ const Luxurycars = () => {
 
 
 
+
     ];
     console.log(cars)
 
+    console.log(clickedCardTitle)
 
 
 
@@ -613,10 +615,10 @@ const Luxurycars = () => {
                                             <p className='prico'>Price</p>
                                             <p className='amountt'>${car.Price}</p>
                                             <div className="card-buttons">
-                                                <button className="card-button textme" onClick={() => handleCloseForm(car.Name)}><BiMessageRounded className="message-icon" />Text Us</button>
+                                                <button className="card-button textme" onClick={() => handleCloseForm(car.Name+" "+car.Model)}><BiMessageRounded className="message-icon" />Text Us</button>
                                                 {/* <button className="card-button detailss" >View details</button> */}
                                             </div>
-                                            {showForm && clickedCardTitle === car.Name && (
+                                            {showForm && clickedCardTitle === car.Name+" "+car.Model && (
                                                 <div className="contact-form-overlay">
                                                     <div className="contact-form-card" ref={formRef}>
                                                         <div className="contact-form-header">

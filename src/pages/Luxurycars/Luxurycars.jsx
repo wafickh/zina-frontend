@@ -388,8 +388,7 @@ const Luxurycars = () => {
             imageSrc: 'https://res.cloudinary.com/do0puhubq/image/upload/v1690303528/porshe12_ndjebd.jpg',
             price: '$91,681',
         },
-//        ,"Name":"Porsche","Price":"85,581","Year":"2020","Model":"Panamera","images":[{"url":"https://res.cloudinary.com/do0puhubq/image/upload/v1690303461/porshe23_r2cocg.jpg"}]
-
+        //       https://www.privatecollectionmotors.com/imagetag/515/main/f/Used-2006-Aston-Martin-DB9-1690873927.jpg
         {
             title: '2020 Porsche Panamera',
             imageSrc: 'https://res.cloudinary.com/do0puhubq/image/upload/v1690303461/porshe23_r2cocg.jpg',
@@ -456,6 +455,7 @@ const Luxurycars = () => {
 
             price: '$129,785',
         },
+
         {
             title: '2001 Rolls-Royce Corniche',
             imageSrc: 'https://www.privatecollectionmotors.com/imagetag/464/main/l/Used-2001-Rolls-Royce-Corniche-Convertible-1686939564.jpg',
@@ -508,12 +508,14 @@ const Luxurycars = () => {
                             <select id="Name" value={name} onChange={handleDropdownChange}>
                                 <option value="">Any</option>
                                 <option value="Aston Martin">Aston Martin</option>
-                                <option value="Mercedes">Mercedes</option>
+                                <option value="Audi">Audi</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Bentley">Bentley</option>
+                                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                <option value="Maybach">Maybach</option>
                                 <option value="Porsche">Porsche</option>
                                 <option value="Rolls-Royce">Rolls-Royce</option>
-                                <option value="Maybach">Maybach</option>
-                                <option value="Bentley">Bentley</option>
-                                <option value="Jaguar">Jaguar</option>
+                                <option value="Ferrari">Ferrari</option>
 
                             </select>
                         </div>
@@ -581,7 +583,7 @@ const Luxurycars = () => {
                                     >
                                         <FaChevronLeft />
                                     </button>
-                                        <span id='sas'>Browse {totalCars} Vehicles</span>
+                                    <span id='sas'>Browse {totalCars} Vehicles</span>
                                     <button
                                         disabled={currentPage * pageSize >= totalCars}
                                         onClick={() => handlePageChange(currentPage + 1)}
@@ -615,10 +617,10 @@ const Luxurycars = () => {
                                             <p className='prico'>Price</p>
                                             <p className='amountt'>${car.Price}</p>
                                             <div className="card-buttons">
-                                                <button className="card-button textme" onClick={() => handleCloseForm(car.Name+" "+car.Model)}><BiMessageRounded className="message-icon" />Text Us</button>
+                                                <button className="card-button textme" onClick={() => handleCloseForm(car.Name + " " + car.Model)}><BiMessageRounded className="message-icon" />Text Us</button>
                                                 {/* <button className="card-button detailss" >View details</button> */}
                                             </div>
-                                            {showForm && clickedCardTitle === car.Name+" "+car.Model && (
+                                            {showForm && clickedCardTitle === car.Name + " " + car.Model && (
                                                 <div className="contact-form-overlay">
                                                     <div className="contact-form-card" ref={formRef}>
                                                         <div className="contact-form-header">
@@ -676,18 +678,18 @@ const Luxurycars = () => {
                                                         </form>
                                                     </div>
                                                 </div>
-                                                    )}
-                                                </div>
-                                            </div>
-                                        ))}
-
-
-
-
-
-
-
+                                            )}
+                                        </div>
                                     </div>
+                                ))}
+
+
+
+
+
+
+
+                            </div>
 
                             <div className="responsive-container">
                                 <div className="left-container">
@@ -698,7 +700,7 @@ const Luxurycars = () => {
                                         <FaChevronLeft />
                                     </button>
                                     {/* {totalCars} */}
-                                        <span id='sas'>Browse {totalCars} Vehicles</span>
+                                    <span id='sas'>Browse {totalCars} Vehicles</span>
                                     <button
                                         disabled={currentPage * pageSize >= totalCars}
                                         onClick={() => handlePageChange(currentPage + 1)}
